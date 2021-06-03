@@ -1,16 +1,19 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import dotenv from 'dotenv';
 import SHeader from './Style';
+
+dotenv.config();
 
 export default function Header() {
   const [translations, setTranslations] = useState({});
   const [images, setImages] = useState({});
 
   useEffect(() => {
-    axios.get('http://localhost:8080/texts').then(({ data }) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
       setTranslations(data);
     });
-    axios.get('http://localhost:8080/images').then(({ data }) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/images`).then(({ data }) => {
       setImages(data);
     });
   }, []);
