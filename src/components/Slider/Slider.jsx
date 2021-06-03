@@ -9,7 +9,6 @@ const slideImages = [
   './img/slider/bureau2.jpeg',
   './img/slider/bureau3.jpeg',
 ];
-
 const properties = {
   duration: 3500,
   transitionDuration: 500,
@@ -18,9 +17,9 @@ const properties = {
   arrow: true,
 };
 
-function Slider({ theme }) {
+function Slider() {
   return (
-    <Sslider className="slide-container" theme={theme}>
+    <Sslider className="slide-container">
       <Slide {...properties}>
         <div className="each-slide">
           <div
