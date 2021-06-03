@@ -1,7 +1,6 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-import PropTypes from 'prop-types';
 import Sslider from './Style';
 
 const slideImages = [
@@ -76,9 +75,5 @@ function Slider() {
     </Sslider>
   );
 }
-
-Slider.propTypes = {
-  theme: PropTypes.string.isRequired,
-};
 
 export default Slider;

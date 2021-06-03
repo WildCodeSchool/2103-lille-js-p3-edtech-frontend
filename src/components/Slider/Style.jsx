@@ -9,7 +9,6 @@ const Sslider = styled.div`
     display: flex;
     align-items: center;
     justify-content: left;
-
     background-size: cover;
     height: 350px;
   }
@@ -40,25 +39,16 @@ const Sslider = styled.div`
 
   .slider-text {
     display: flex;
-
     margin-left: 300px;
     text-align: justify;
   }
+
   .each-title {
     display: flex;
     font-size: 1.2em;
     margin-left: 300px;
     text-align: justify;
   }
-  /* .each-slideshow-indicator::before {
-    background: ${({ theme }) => theme.fontColor || 'yellowgreen'};
-  }
-
-  .style {
-    height: 75vh;
-    width: 100%;
-  } 
-  */
 `;
 
 export default Sslider;
