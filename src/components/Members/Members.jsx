@@ -13,7 +13,6 @@ export default function Members() {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/members`).then(({ data }) => {
       setMembers(data);
-      console.log(data);
     });
   }, []);
   return (
