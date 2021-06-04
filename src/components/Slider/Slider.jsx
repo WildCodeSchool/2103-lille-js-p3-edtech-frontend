@@ -20,57 +20,29 @@ function Slider() {
   return (
     <Sslider className="slide-container">
       <Slide {...properties}>
-        <div className="each-slide">
-          <div
-            className="each-img"
-            style={{ backgroundImage: `url(${slideImages[0]})` }}
-          >
-            <span className="each-text">
-              <h2 className="each-title">
-                Mettre la technologie au service de l&apos;éducation et de la
-                formation
-              </h2>
-              <p className="slider-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </span>
-          </div>
-        </div>
-        <div className="each-slide">
-          <div style={{ backgroundImage: `url(${slideImages[1]})` }}>
-            <span className="each-text">
-              <h2 className="each-title">
-                Mettre la technologie au service de l&apos;éducation et de la
-                formation
-              </h2>
-              <p className="slider-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </span>
-          </div>
-        </div>
-        <div className="each-slide">
-          <div style={{ backgroundImage: `url(${slideImages[2]})` }}>
-            <span className="each-text">
-              <h2 className="each-title">
-                Mettre la technologie au service de l&apos;éducation et de la
-                formation
-              </h2>
-              <p className="slider-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </span>
-          </div>
-        </div>
+        {slideImages.map((image) => {
+          return (
+            <div className="each-slide">
+              <div
+                className="each-img"
+                style={{ backgroundImage: `url(${image})` }}
+              >
+                <span className="each-text">
+                  <h2 className="each-title">
+                    Mettre la technologie au service de l&apos;éducation et de
+                    la formation
+                  </h2>
+                  <p className="slider-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </span>
+              </div>
+            </div>
+          );
+        })}
       </Slide>
     </Sslider>
   );
