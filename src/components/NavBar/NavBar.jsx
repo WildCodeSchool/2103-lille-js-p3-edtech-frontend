@@ -7,11 +7,21 @@ dotenv.config();
 
 export default function NavBar() {
   const [translations, setTranslations] = useState({});
+  const [images, setImages] = useState({});
+  const [externeLinks, SetExterneLinks] = useState({});
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
       setTranslations(data);
     });
+    axios.get(`${process.env.REACT_APP_API_URL}/images`).then(({ data }) => {
+      setImages(data);
+    });
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/externelinks`)
+      .then(({ data }) => {
+        SetExterneLinks(data);
+      });
   }, []);
   return (
     <SNavBar>
@@ -21,7 +31,7 @@ export default function NavBar() {
             <li className="actu">{translations.first_btn || null}</li>
           </a>
           <a
-            href="https://www.helloasso.com/associations/edtech-hauts-de-france"
+            href={externeLinks?.link_helloasso}
             target="_blank"
             rel="noreferrer"
           >
@@ -33,40 +43,40 @@ export default function NavBar() {
         </ul>
 
         <div className="pictos">
-          <a href="http://eepurl.com/hhJSqj " target="_blank" rel="noreferrer">
-            <img
-              src="/img/navBar/pictogrammes/Picto_Newsletter.png"
-              alt="Picto_Newsletter"
-            />
-          </a>
           <a
-            href="https://www.facebook.com/Edtech.HdF"
+            href={externeLinks?.link_newsletter}
             target="_blank"
             rel="noreferrer"
           >
             <img
-              src="/img/navBar/pictogrammes/Picto_Facebook.png"
-              alt="Picto_Facebook"
+              src={images?.picto_newsletter?.src}
+              alt={images?.picto_newsletter?.alt}
             />
           </a>
           <a
-            href="https://www.linkedin.com/company/edtech-hauts-de-france/"
+            href={externeLinks?.link_facebook}
             target="_blank"
             rel="noreferrer"
           >
             <img
-              src="/img/navBar/pictogrammes/Picto_Linkedin.png"
-              alt="Picto_LinkedIn"
+              src={images?.picto_facebook?.src}
+              alt={images?.picto_facebook?.alt}
             />
           </a>
           <a
-            href="https://twitter.com/edtech_hdf"
+            href={externeLinks?.link_linkedIn}
             target="_blank"
             rel="noreferrer"
           >
             <img
-              src="/img/navBar/pictogrammes/Picto_Twitter.png"
-              alt="Picto_Facebook"
+              src={images?.picto_linkedIn?.src}
+              alt={images?.picto_linkedIn?.alt}
+            />
+          </a>
+          <a href={externeLinks?.link_twitter} target="_blank" rel="noreferrer">
+            <img
+              src={images?.picto_twitter?.src}
+              alt={images?.picto_twitter?.alt}
             />
           </a>
         </div>
