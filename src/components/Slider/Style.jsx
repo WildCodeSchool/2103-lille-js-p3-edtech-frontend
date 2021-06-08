@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 const Sslider = styled.div`
   padding-top: 20px;
+  .each-slide {
+    position: relative;
+    height: 350px;
+  }
 
   .each-slide > div {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -11,21 +16,10 @@ const Sslider = styled.div`
     height: 350px;
   }
 
-  .each-slide span {
-    padding: 20px;
+  .each-slide .each-text {
     font-size: 1.1em;
     background-color: rgba(55, 106, 182, 0.664);
     text-align: center;
-    border-radius: 5px;
-    width: 50%;
-    height: 100%;
-  }
-  .each-img {
-    height: 75vh;
-    width: 100%;
-  }
-
-  .each-text {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -33,24 +27,28 @@ const Sslider = styled.div`
     text-align: justify;
     justify-content: center;
     color: white;
+    width: 50vw;
+  }
+  .each-img {
+    width: 100%;
   }
 
   .slider-text {
     text-align: justify;
-    margin-left: 300px;
-    @media (max-width: 700px) {
+    margin-left: 250px;
+    margin-right: 5px;
+    @media (max-width: 800px) {
       height: 20%;
       font-size: 0.9em;
       margin-left: 0px;
     }
   }
-
   .each-title {
     display: flex;
     text-align: justify;
     font-size: 1.1em;
-    margin-left: 300px;
-    @media (max-width: 700px) {
+    margin-left: 250px;
+    @media (max-width: 800px) {
       font-size: 0.9em;
       margin-left: 0px;
     }

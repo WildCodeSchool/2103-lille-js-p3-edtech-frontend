@@ -30,12 +30,16 @@ function Slider() {
         {sliders.map((slide) => {
           return (
             <div className="each-slide">
-              <div className="each-img">
-                <img src={slide.img_src} alt={slide.img_alt} />
-                <span className="each-text">
-                  <h2 className="each-title">src={slide.title}</h2>
-                  <p className="slider-text">src={slide.text}</p>
-                </span>
+              <div
+                className="each-img"
+                style={{ backgroundImage: `url(${slide.img_src})` }}
+              />
+
+              <div className="each-text">
+                <div>
+                  <h2 className="each-title">{slide.title}</h2>
+                  <p className="slider-text">{slide.text}</p>
+                </div>
               </div>
             </div>
           );
