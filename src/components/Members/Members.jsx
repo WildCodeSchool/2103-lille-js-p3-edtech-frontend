@@ -69,7 +69,9 @@ export default function Members() {
         {members.map((member) => {
           return (
             <div className="slide">
-              <img src={member.logo_src} alt={member.logo_alt} />
+              <a href={member.link} target="_blank" rel="noreferrer">
+                <img src={member.logo_src} alt={member.logo_alt} />
+              </a>
             </div>
           );
         })}
