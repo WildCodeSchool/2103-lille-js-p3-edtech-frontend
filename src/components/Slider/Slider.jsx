@@ -34,7 +34,6 @@ function Slider() {
                 className="each-img"
                 style={{ backgroundImage: `url(${slide.img_src})` }}
               />
-
               <div className="each-text">
                 <div>
                   <h2 className="each-title">{slide.title}</h2>
