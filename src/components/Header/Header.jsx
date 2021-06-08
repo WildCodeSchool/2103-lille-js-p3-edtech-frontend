@@ -17,14 +17,12 @@ export default function Header() {
   return (
     <SHeader>
       <div className="logo">
-        <a href="/">
-          <img
-            src={images?.logo_header?.src}
-            alt={images?.logo_header?.alt}
-            width="auto"
-            height="250"
-          />
-        </a>
+        <img
+          src={images?.logo_header?.src}
+          alt={images?.logo_header?.alt}
+          width="auto"
+          height="250"
+        />
       </div>
     </SHeader>
   );
