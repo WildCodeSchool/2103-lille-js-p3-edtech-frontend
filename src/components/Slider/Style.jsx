@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Sslider = styled.div`
-  padding-top: 20px;
   .each-slide {
     position: relative;
     height: 350px;
