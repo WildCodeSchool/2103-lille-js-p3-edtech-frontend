@@ -10,7 +10,7 @@ export default function HdfMap() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/externelinks`)
+      .get(`${process.env.REACT_APP_API_URL}/external_links`)
       .then(({ data }) => {
         SetExterneLinks(data);
       });
