@@ -19,7 +19,7 @@ function Slider() {
   const [sliders, setSliders] = useState([]);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/sliders`).then(({ data }) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/slider`).then(({ data }) => {
       setSliders(data);
     });
   }, []);
