@@ -5,23 +5,29 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import Sslider from './Style';
 
-const properties = {
-  duration: 3500,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  arrow: 'true',
-};
-
 dotenv.config();
 
 function Slider() {
   const [sliders, setSliders] = useState([]);
+  const [settings, setSettings] = useState({});
+
+  const properties = {
+    duration: settings.slider_duration,
+    transitionDuration: settings.slider_transitionDuration,
+    infinite: settings.slider_infinite,
+    indicators: true,
+  };
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/slider`).then(({ data }) => {
       setSliders(data);
     });
+
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/settings_carousel`)
+      .then(({ data }) => {
+        setSettings(data);
+      });
   }, []);
 
   return (
@@ -37,7 +43,7 @@ function Slider() {
               <div className="each-text">
                 <div>
                   <h2 className="each-title">{slide.title}</h2>
-                  <p className="slider-text">{slide.text}</p>
+                  <p className="slider-text">{slide.subtext}</p>
                 </div>
               </div>
             </div>

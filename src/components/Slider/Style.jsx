@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Sslider = styled.div`
   .each-slide {
     position: relative;
-    height: 350px;
+    height: 50vh;
   }
 
   .each-slide > div {
@@ -12,7 +12,6 @@ const Sslider = styled.div`
     align-items: center;
     justify-content: left;
     background-size: cover;
-    height: 350px;
   }
 
   .each-slide .each-text {
