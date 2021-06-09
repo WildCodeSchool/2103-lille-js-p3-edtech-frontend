@@ -12,6 +12,7 @@ const Sslider = styled.div`
     align-items: center;
     justify-content: left;
     background-size: cover;
+    height: 50vh;
   }
 
   .each-slide .each-text {
