@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 const Sslider = styled.div`
+<<<<<<< HEAD
+=======
+  padding-top: 20px;
+
+>>>>>>> afbc991557e5671df20e8893555507e8de04ac67
   .each-slide > div {
     display: flex;
     align-items: center;
@@ -34,16 +39,24 @@ const Sslider = styled.div`
   }
 
   .slider-text {
-    display: flex;
-    margin-left: 300px;
     text-align: justify;
+    margin-left: 300px;
+    @media (max-width: 700px) {
+      height: 20%;
+      font-size: 0.9em;
+      margin-left: 0px;
+    }
   }
 
   .each-title {
     display: flex;
-    font-size: 1.2em;
-    margin-left: 300px;
     text-align: justify;
+    font-size: 1.1em;
+    margin-left: 300px;
+    @media (max-width: 700px) {
+      font-size: 0.9em;
+      margin-left: 0px;
+    }
   }
 `;
 
