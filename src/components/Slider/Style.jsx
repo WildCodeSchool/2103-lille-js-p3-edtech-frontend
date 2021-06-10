@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
 const Sslider = styled.div`
-<<<<<<< HEAD
-=======
-  padding-top: 20px;
-
->>>>>>> afbc991557e5671df20e8893555507e8de04ac67
   .each-slide > div {
     display: flex;
     align-items: center;

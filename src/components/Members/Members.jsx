@@ -17,7 +17,7 @@ export default function Members() {
   }, []);
   return (
     <SMembers>
-      <h1>Members</h1>
+      <h1>Membres</h1>
       <Carousel
         additionalTransfrom={0}
         arrows

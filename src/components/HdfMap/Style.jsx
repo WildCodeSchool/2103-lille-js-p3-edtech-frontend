@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const SMap = styled.div`
-  .map {
-    height: 500px;
-  }
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 `;
 export default SMap;

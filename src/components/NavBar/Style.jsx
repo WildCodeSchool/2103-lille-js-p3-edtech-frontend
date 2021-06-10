@@ -4,6 +4,7 @@ const SNavBar = styled.div`
   nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     ul {
       list-style: none;
