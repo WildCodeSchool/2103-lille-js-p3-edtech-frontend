@@ -21,7 +21,7 @@ export default function HdfMap() {
       <iframe
         title="Map"
         width="100%"
-        height="500vh"
+        height="100%"
         src={externeLinks?.link_map}
         target="_blank"
         rel="noreferrer"

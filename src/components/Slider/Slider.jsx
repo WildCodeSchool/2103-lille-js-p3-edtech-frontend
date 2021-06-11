@@ -1,44 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import dotenv from 'dotenv';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import Sslider from './Style';
 
-const slideImages = [
-  './img/slider/bureau1.jpeg',
-  './img/slider/bureau2.jpeg',
-  './img/slider/bureau3.jpeg',
-];
-const properties = {
-  duration: 3500,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  arrow: 'true',
-};
+dotenv.config();
 
 function Slider() {
+  const [sliders, setSliders] = useState([]);
+  const [settings, setSettings] = useState({});
+
+  const properties = {
+    duration: settings.slider_duration,
+    transitionDuration: settings.slider_transitionDuration,
+    infinite: settings.slider_infinite,
+    indicators: true,
+  };
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_API_URL}/slider`).then(({ data }) => {
+      setSliders(data);
+    });
+
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/settings_carousel`)
+      .then(({ data }) => {
+        setSettings(data);
+      });
+  }, []);
+
   return (
     <Sslider className="slide-container">
       <Slide {...properties}>
-        {slideImages.map((image) => {
+        {sliders.map((slide) => {
           return (
             <div className="each-slide">
               <div
                 className="each-img"
-                style={{ backgroundImage: `url(${image})` }}
-              >
-                <span className="each-text">
-                  <h2 className="each-title">
-                    Mettre la technologie au service de l&apos;éducation et de
-                    la formation
-                  </h2>
-                  <p className="slider-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                </span>
+                style={{ backgroundImage: `url(${slide.img_src})` }}
+              />
+              <div className="each-text">
+                <div>
+                  <h2 className="each-title">{slide.title}</h2>
+                  <p className="slider-text">{slide.subtext}</p>
+                </div>
               </div>
             </div>
           );
