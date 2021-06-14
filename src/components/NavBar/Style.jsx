@@ -7,6 +7,7 @@ const SNavBar = styled.div`
     align-items: center;
 
     ul {
+      margin-left: 30px;
       list-style: none;
       display: flex;
       width: 50%;
