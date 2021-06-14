@@ -1,3 +1,4 @@
+import { TwitterTweetEmbed, TwitterTimelineEmbed } from 'react-twitter-embed';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import Slider from './components/Slider/Slider';
@@ -19,6 +20,8 @@ function App() {
       <Members />
       <Partners />
       <Events />
+      <TwitterTweetEmbed />
+      <TwitterTimelineEmbed />
       <HdfTwitter />
       <ContactForm />
       <Footer />
