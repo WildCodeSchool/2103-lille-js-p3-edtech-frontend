@@ -16,20 +16,5 @@ export default function HdfMap() {
       });
   }, []);
 
-  return (
-    <SMap className="map">
-      <iframe
-        title="Map"
-        width="100%"
-        height="390vh"
-        src={externeLinks?.link_map}
-        target="_blank"
-        rel="noreferrer"
-        frameBorder="0"
-        allowFullScreen
-        allowTransparency
-        allow="geolocation; camera; accelerometer; gyroscope; magnetometer; fullscreen"
-      />
-    </SMap>
-  );
+  return <SMap className="map">{externeLinks?.link_map}</SMap>;
 }
