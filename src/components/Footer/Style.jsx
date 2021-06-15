@@ -4,17 +4,39 @@ const SFooter = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url('../img/footer/Footer_EdTech_HdF.png');
-  font-size: 0.8em;
+  
+  height: 10vh;
+  font-size: 1em;
   padding: 20px;
   display: flex;
   justify-content: flex-end;
+  
+  .background{
+    
+    width: 100%;
+  }
+  .links {
+    font-size: 1em;
+    margin-right: 10%;
+    line-height: 1.5em;
+  }
+
+  .links a {
+    color: white;
+    text-decoration: none;
+  }
 
   .copyright {
     text-align: right;
     line-height: 1.5em;
     width: 30vw;
     color: white;
+  }
+
+  .copyright a {
+    color: white;
+    text-decoration: none;
+  }
 
     @media (max-width: 1024px) {
       width: 40vw;
