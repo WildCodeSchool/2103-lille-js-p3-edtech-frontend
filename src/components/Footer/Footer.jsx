@@ -27,7 +27,7 @@ export default function Footer() {
       <div
         className="background"
         style={{
-          backgroundImage: `url(${images.background_footer})`,
+          backgroundImage: `url(${images?.background_footer?.src})`,
         }}
       />
       <div className="links">

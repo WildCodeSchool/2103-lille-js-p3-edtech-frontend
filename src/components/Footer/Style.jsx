@@ -4,16 +4,17 @@ const SFooter = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
-  
+ 
   height: 10vh;
   font-size: 1em;
   padding: 20px;
   display: flex;
   justify-content: flex-end;
   
-  .background{
-    
+  .background  {
+    background-size:cover;   
     width: 100%;
+    height: 100%;
   }
   .links {
     font-size: 1em;
