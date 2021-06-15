@@ -18,8 +18,8 @@ const SPartners = styled.div`
     a {
       display: flex;
       align-items: center;
-      width: 200px;
-      padding: 20px;
+      width: 150px;
+      padding: 30px;
       img {
         filter: grayscale(100%);
         max-width: 100%;
