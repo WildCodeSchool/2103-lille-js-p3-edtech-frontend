@@ -27,8 +27,7 @@ export default function HdfMap() {
         officia beatae doloremque praesentium, quod nobis quaerat voluptatum
         autem, magnam debitis? Lorem ipsum dolor sit amet consectetur,
         adipisicing elit. Delectus suscipit, non error laboriosam eos animi quas
-        dolores? Voluptates voluptatem beatae, praesentium sed esse porro
-        explicabo reprehenderit deserunt culpa, laudantium fugit.
+        dolores? Voluptates voluptatem beatae, audantium fugit.
       </p>
 
       <button type="button" className="btn-map">

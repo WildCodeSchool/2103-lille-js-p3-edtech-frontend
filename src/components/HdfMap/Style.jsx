@@ -8,7 +8,7 @@ const SMap = styled.div`
   }
   .description-map {
     margin: 1rem;
-    line-height: 1.65;
+    line-height: 1.5;
     text-align: justify;
   }
 
