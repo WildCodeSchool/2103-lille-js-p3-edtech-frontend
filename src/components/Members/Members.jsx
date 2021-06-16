@@ -16,7 +16,7 @@ export default function Members() {
     });
   }, []);
   return (
-    <SMembers>
+    <SMembers id="members">
       <h1>Members</h1>
       <Carousel
         additionalTransfrom={0}

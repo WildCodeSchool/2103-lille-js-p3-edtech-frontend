@@ -17,7 +17,7 @@ export default function HdfMap() {
   }, []);
 
   return (
-    <SMap className="map">
+    <SMap className="map" id="map">
       <iframe
         title="Map"
         width="100%"
