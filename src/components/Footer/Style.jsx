@@ -9,12 +9,8 @@ const SFooter = styled.footer`
   padding: 20px;
   display: flex;
   justify-content: flex-end;
-  
-  .background {
-    background-size:cover;   
-    width: 100%;
-    height: 100%;
-  }
+  background-size: cover;
+
   .links {
     font-size: 1em;
     margin-right: 10%;
@@ -22,7 +18,7 @@ const SFooter = styled.footer`
   }
 
   .links a {
-    color: #9c2b2b;
+    color: white;
     text-decoration: none;
   }
 
@@ -34,19 +30,8 @@ const SFooter = styled.footer`
   }
 
   .copyright a {
-    color: #661111;
+    color: white;
     text-decoration: none;
-  }
-
-    @media (max-width: 1024px) {
-      width: 40vw;
-    }
-    @media (max-width: 768px) {
-      width: 50vw;
-    }
-    @media (max-width: 425px) {
-      width: 90vw;
-    }
   }
 `;
 

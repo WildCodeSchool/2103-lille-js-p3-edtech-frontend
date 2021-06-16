@@ -22,14 +22,14 @@ export default function Footer() {
         SetExterneLinks(data);
       });
   }, []);
+
   return (
-    <SFooter>
-      <div
-        className="background"
-        style={{
-          backgroundImage: `url(${images?.background_footer?.src})`,
-        }}
-      />
+    <SFooter
+      className="background"
+      style={{
+        backgroundImage: `url(${images?.background_footer?.src})`,
+      }}
+    >
       <div className="links">
         <ul>
           <a href="#Actualités">
