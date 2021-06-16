@@ -23,7 +23,7 @@ export default function HdfMap() {
   return (
     <SMap className="map">
       <h1 className="title-map">{translations.first_section || null}</h1>
-      <p className="description-map">{translations.description || null}</p>
+      <p className="description-map">{translations.description_map || null}</p>
       <button type="button" className="btn-map">
         <a
           className="link-map"
