@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 const SMembers = styled.div`
   color: #2c2875;
+  padding-top: 30px;
+  padding-bottom: 20px;
   h1 {
     text-align: center;
     font-size: 45px;
