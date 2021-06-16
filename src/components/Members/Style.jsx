@@ -18,13 +18,17 @@ const SMembers = styled.div`
       right: 10px;
     }
     .slide {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
       margin: auto;
-      width: 90%;
+      width: 10vw;
       height: 15vh;
 
       img {
         display: block;
-        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
         filter: grayscale(100%);
         margin: auto;
       }
