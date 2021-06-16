@@ -4,14 +4,13 @@ const SFooter = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
- 
   height: 10vh;
   font-size: 1em;
   padding: 20px;
   display: flex;
   justify-content: flex-end;
   
-  .background  {
+  .background {
     background-size:cover;   
     width: 100%;
     height: 100%;
@@ -23,7 +22,7 @@ const SFooter = styled.footer`
   }
 
   .links a {
-    color: white;
+    color: #9c2b2b;
     text-decoration: none;
   }
 
@@ -35,7 +34,7 @@ const SFooter = styled.footer`
   }
 
   .copyright a {
-    color: white;
+    color: #661111;
     text-decoration: none;
   }
 
