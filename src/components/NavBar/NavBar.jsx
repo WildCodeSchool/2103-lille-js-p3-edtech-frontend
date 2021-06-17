@@ -24,7 +24,7 @@ export default function NavBar() {
       });
   }, []);
   return (
-    <SNavBar>
+    <SNavBar id="navBar">
       <nav>
         <ul>
           <a href="#Actualités">

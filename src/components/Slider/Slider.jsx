@@ -31,7 +31,7 @@ function Slider() {
   }, []);
 
   return (
-    <Sslider className="slide-container">
+    <Sslider className="slide-container" id="slider">
       <Slide {...properties}>
         {sliders.map((slide) => {
           return (

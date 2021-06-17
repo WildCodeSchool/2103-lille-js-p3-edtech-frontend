@@ -21,19 +21,21 @@ export default function HdfMap() {
   }, []);
 
   return (
-    <SMap className="map">
+    <SMap className="map" id="map">
       <h1 className="title-map">{translations.first_section || null}</h1>
+
       <p className="description-map">{translations.description_map || null}</p>
-      <button type="button" className="btn-map">
-        <a
-          className="link-map"
-          href={externeLinks?.link_map}
-          target="_blank"
-          rel="noreferrer"
-        >
+
+      <a
+        className="link-map"
+        href={externeLinks?.link_map}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button type="button" className="btn-map">
           Lien vers la carte
-        </a>
-      </button>
+        </button>
+      </a>
     </SMap>
   );
 }

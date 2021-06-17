@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <SHeader>
-      <div className="logo">
+      <div className="logo" id="/">
         <img
           src={images?.logo_header?.src}
           alt={images?.logo_header?.alt}

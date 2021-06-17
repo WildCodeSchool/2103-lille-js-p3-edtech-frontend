@@ -26,7 +26,7 @@ export default function Members() {
       });
   }, []);
   return (
-    <SMembers>
+    <SMembers id="members">
       <h1>{translations.second_section}</h1>
       {settings.carousel_duration && (
         <Carousel
@@ -79,7 +79,7 @@ export default function Members() {
         >
           {members.map((member) => {
             return (
-              <div key={member.id} className="slide">
+              <div className="slide">
                 <a href={member.link} target="_blank" rel="noreferrer">
                   <img src={member.logo_src} alt={member.logo_alt} />
                 </a>
