@@ -19,7 +19,7 @@ const SContact = styled.div`
 
   h1 {
     text-align: center;
-    font-size: 1.9em;
+    font-size: 45px;
     font-weight: bold;
     margin-bottom: 30px;
   }
