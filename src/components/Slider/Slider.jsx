@@ -12,9 +12,9 @@ function Slider() {
   const [settings, setSettings] = useState({});
 
   const properties = {
-    duration: settings.slider_duration,
-    transitionDuration: settings.slider_transitionDuration,
-    infinite: settings.slider_infinite,
+    duration: settings.slider_duration || 3500,
+    transitionDuration: settings.slider_transitionDuration || 500,
+    infinite: settings.slider_infinite || true,
     indicators: true,
   };
 
@@ -31,11 +31,11 @@ function Slider() {
   }, []);
 
   return (
-    <Sslider className="slide-container">
+    <Sslider className="slide-container" id="slider">
       <Slide {...properties}>
         {sliders.map((slide) => {
           return (
-            <div className="each-slide">
+            <div key={slide.id} className="each-slide">
               <div
                 className="each-img"
                 style={{ backgroundImage: `url(${slide.img_src})` }}

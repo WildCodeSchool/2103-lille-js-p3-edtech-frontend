@@ -25,7 +25,7 @@ const SNavBar = styled.div`
       width: 150px;
       padding: 10px;
       color: #2c2875;
-      font-size: 1.9em;
+      font-size: 1.5em;
       font-weight: 900;
       text-align: center;
     }

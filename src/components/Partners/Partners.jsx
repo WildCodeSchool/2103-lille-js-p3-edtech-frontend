@@ -18,7 +18,7 @@ export default function Partners() {
     });
   }, []);
   return (
-    <SPartners>
+    <SPartners id="partners">
       <h1>{translations.third_section || null}</h1>
       <div className="partner-logo">
         {partners.map((partner) => {
