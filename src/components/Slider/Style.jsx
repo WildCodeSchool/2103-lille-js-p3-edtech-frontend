@@ -34,8 +34,8 @@ const Sslider = styled.div`
 
   .slider-text {
     text-align: justify;
-    margin-left: 250px;
-    margin-right: 5px;
+    margin-left: 200px;
+    margin-right: 30px;
     @media (max-width: 800px) {
       height: 20%;
       font-size: 0.9em;
@@ -45,8 +45,10 @@ const Sslider = styled.div`
   .each-title {
     display: flex;
     text-align: justify;
-    font-size: 1.1em;
-    margin-left: 250px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 20px;
+    margin-left: 200px;
     @media (max-width: 800px) {
       font-size: 0.9em;
       margin-left: 0px;

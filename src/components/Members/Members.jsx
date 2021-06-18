@@ -26,7 +26,7 @@ export default function Members() {
       });
   }, []);
   return (
-    <SMembers>
+    <SMembers id="members">
       <h1>{translations.second_section}</h1>
       {settings.carousel_duration && (
         <Carousel
