@@ -1,6 +1,6 @@
 import Header from './components/Header/Header';
-import NavBar from './components/NavBar/NavBar';
 import Slider from './components/Slider/Slider';
+import NavBar from './components/NavBar/NavBar';
 import HdfMap from './components/HdfMap/HdfMap';
 import Members from './components/Members/Members';
 import Partners from './components/Partners/Partners';

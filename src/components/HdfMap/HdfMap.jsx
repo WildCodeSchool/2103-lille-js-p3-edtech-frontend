@@ -6,6 +6,7 @@ import SMap from './Style';
 dotenv.config();
 
 export default function HdfMap() {
+  const [translations, setTranslations] = useState({});
   const [externeLinks, SetExterneLinks] = useState({});
 
   useEffect(() => {
@@ -14,22 +15,25 @@ export default function HdfMap() {
       .then(({ data }) => {
         SetExterneLinks(data);
       });
+    axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
+      setTranslations(data);
+    });
   }, []);
 
   return (
-    <SMap className="map">
-      <iframe
-        title="Map"
-        width="100%"
-        height="390vh"
-        src={externeLinks?.link_map}
+    <SMap className="map" id="map">
+      <h1 className="title-map">{translations.first_section || null}</h1>
+      <p className="description-map">{translations.description_map || null}</p>
+      <a
+        className="link-map"
+        href={externeLinks?.link_map}
         target="_blank"
         rel="noreferrer"
-        frameBorder="0"
-        allowFullScreen
-        allowTransparency
-        allow="geolocation; camera; accelerometer; gyroscope; magnetometer; fullscreen"
-      />
+      >
+        <button type="button" className="btn-map">
+          Lien vers la carte
+        </button>
+      </a>
     </SMap>
   );
 }
