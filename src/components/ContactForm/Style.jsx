@@ -100,26 +100,9 @@ const SContact = styled.div`
     display: flex;
     justify-content: center;
 
-    span {
-    }
     input {
       width: auto;
       height: auto;
-    }
-  }
-  .beforeCheck {
-    border: 2px transparent solid;
-    background-color: red;
-    height: auto;
-    padding: 5px;
-    width: 15%;
-    border-radius: 17px;
-    margin: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #f5f5f5;
-    @media (max-width: 600px) {
-      font-size: 0.5em;
     }
   }
 `;

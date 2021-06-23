@@ -17,7 +17,6 @@ export default function ContactForm() {
     message: '',
   });
   const [selected, setSelected] = useState(false);
-  const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
@@ -29,9 +28,6 @@ export default function ContactForm() {
     const newDetails = { ...details };
     newDetails[evt.target.name] = evt.target.value;
     setDetails(newDetails);
-  };
-  const handleClick = () => {
-    setClicked(true);
   };
 
   const handleSubmit = (e) => {
@@ -73,7 +69,9 @@ export default function ContactForm() {
                     name="firstname"
                     value={details.firstname}
                     onChange={handleChange}
-                    required
+                    required={
+                      translations?.requirable_first_input === 'obligatoire'
+                    }
                   />
                 </label>
               </div>
@@ -86,7 +84,9 @@ export default function ContactForm() {
                     name="lastname"
                     value={details.lastname}
                     onChange={handleChange}
-                    required
+                    required={
+                      translations?.requirable_second_input === 'obligatoire'
+                    }
                   />
                 </label>
               </div>
@@ -96,9 +96,12 @@ export default function ContactForm() {
                   <input
                     type="text"
                     name="structure"
-                    value={details.society}
+                    value={details.structure}
                     onChange={handleChange}
                     id="structure"
+                    required={
+                      translations?.requirable_third_input === 'obligatoire'
+                    }
                   />
                 </label>
               </div>
@@ -111,6 +114,9 @@ export default function ContactForm() {
                     name="phoneNumber"
                     value={details.phoneNumber}
                     onChange={handleChange}
+                    required={
+                      translations?.requirable_fourth_input === 'obligatoire'
+                    }
                   />
                 </label>
               </div>
@@ -125,6 +131,9 @@ export default function ContactForm() {
                     name="email"
                     value={details.email}
                     onChange={handleChange}
+                    required={
+                      translations?.requirable_fifth_input === 'obligatoire'
+                    }
                   />
                 </label>
               </div>
@@ -137,7 +146,9 @@ export default function ContactForm() {
                     name="message"
                     value={details.message}
                     onChange={handleChange}
-                    required
+                    required={
+                      translations?.requirable_sixth_input === 'obligatoire'
+                    }
                   />
                 </label>
               </div>
@@ -147,6 +158,7 @@ export default function ContactForm() {
             <input
               type="checkbox"
               onChange={(e) => setSelected(e.target.checked)}
+              required
             />
             <span>
               {selected
@@ -154,24 +166,11 @@ export default function ContactForm() {
                 : 'Veuillez valider vos données RGBD'}
             </span>
           </div>
-
-          {selected ? (
-            <div className="button">
-              <button type="submit" className="active" disabled={handleSubmit}>
-                Envoyer
-              </button>
-            </div>
-          ) : (
-            <div className="button">
-              <button
-                type="button"
-                onClick={handleClick}
-                className="beforeCheck"
-              >
-                {clicked ? 'Veuillez cocher la case ' : 'Envoyer'}
-              </button>
-            </div>
-          )}
+          <div className="button">
+            <button type="submit" className="active" disabled={handleSubmit}>
+              Envoyer
+            </button>
+          </div>
         </form>
       )}
     </SContact>
