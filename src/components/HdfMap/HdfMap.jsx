@@ -23,7 +23,16 @@ export default function HdfMap() {
   return (
     <SMap className="map" id="map">
       <h1 className="title-map">{translations.first_section || null}</h1>
-      <p className="description-map">{translations.description_map || null}</p>
+      <div className="description">
+        <img
+          src="https://images-ext-2.discordapp.net/external/axV4qu9QBHztGjzsXzkSSh7lXPuoN3Cvv4iQmidOUAE/%3Fw%3D1120%26h%3D490%26q%3D70%26fm%3Dwebp%26fit%3Dfill/https/images.france.fr/zeaejvyq9bhj/dAZLYQVKQoU6a8gUeU0Mi/02f9938c1c421a313d6b238f670d2ab6/article_ImP_Lille-NordFrance_1120x490.jpg"
+          alt="map"
+        />
+        <p className="description-map">
+          {translations.description_map || null}
+        </p>
+      </div>
+
       <a
         className="link-map"
         href={externeLinks?.link_map}

@@ -21,7 +21,7 @@ const SPartners = styled.div`
       display: flex;
       align-items: center;
       width: 150px;
-      padding: 30px;
+      padding: 70px;
       img {
         filter: grayscale(100%);
         max-width: 100%;
