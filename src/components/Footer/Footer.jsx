@@ -5,7 +5,7 @@ import SFooter from './Style';
 
 export default function Footer() {
   const [translations, setTranslations] = useState({});
-
+  const [colors, setColors] = useState({});
   const [images, setImages] = useState({});
 
   useEffect(() => {
@@ -15,6 +15,9 @@ export default function Footer() {
     axios.get(`${process.env.REACT_APP_API_URL}/images`).then(({ data }) => {
       setImages(data);
     });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
 
   return (
@@ -23,6 +26,8 @@ export default function Footer() {
       style={{
         backgroundImage: `url(${images?.background_footer?.src})`,
       }}
+      background={colors.footer_background_color}
+      text={colors.footer_text_color}
     >
       <div className="links">
         <ul>

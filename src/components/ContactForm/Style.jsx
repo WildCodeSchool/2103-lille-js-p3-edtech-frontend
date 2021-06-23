@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const SContact = styled.div`
-  background-color: #2c2875;
-  color: #f5f5f5;
+  background-color: ${(props) => props.background};
+  color: ${(props) => props.text};
   padding: 40px;
 
   .container {
@@ -58,21 +58,22 @@ const SContact = styled.div`
     button {
       border: 2px transparent solid;
       cursor: pointer;
-      background-color: red;
+      background-color: ${(props) => props.background_button};
+      color: ${(props) => props.text_button};
       height: 45px;
       width: 15%;
       border-radius: 17px;
       margin: 10px;
       font-size: 1.2em;
       font-weight: bold;
-      color: #f5f5f5;
+
       @media (max-width: 600px) {
         font-size: 0.5em;
       }
     }
 
     button:hover {
-      border: 2px #a30808 solid;
+      border: 2px ${(props) => props.background_button_hover} solid;
     }
   }
 `;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const SPartners = styled.div`
-  color: #2c2875;
+  background-color: ${(props) => props.background};
+  color: ${(props) => props.text};
   padding-top: 30px;
   padding-bottom: 20px;
   h1 {
