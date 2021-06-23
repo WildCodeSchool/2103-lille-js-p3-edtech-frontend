@@ -17,11 +17,9 @@ export default function Footer() {
 
   return (
     <SFooter className="background">
-      <div
-        style={{
-          backgroundImage: `url(${images?.background_footer?.src})`,
-        }}
-      />
+      <div className="logo">
+        <img src={images?.logo_footer?.src} alt={images?.picto_footer?.alt} />
+      </div>
       <div className="links">
         <ul>
           <a href="#map">
