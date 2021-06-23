@@ -42,7 +42,7 @@ export default function HdfTwitter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Lien vers actu1
+                  {translations.text1 || null}
                 </a>
               </p>
             </div>
@@ -67,7 +67,7 @@ export default function HdfTwitter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Lien vers actu2
+                  {translations.text2 || null}
                 </a>
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function HdfTwitter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Lien vers actu3
+                  {translations.text3 || null}
                 </a>
               </p>
             </div>
@@ -117,7 +117,7 @@ export default function HdfTwitter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Lien vers actu4
+                  {translations.text4 || null}
                 </a>
               </p>
             </div>
@@ -142,7 +142,7 @@ export default function HdfTwitter() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Lien vers actu5
+                  {translations.text5 || null}
                 </a>
               </p>
             </div>
