@@ -1,11 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
 import SFooter from './Style';
 
 export default function Footer() {
   const [translations, setTranslations] = useState({});
-
   const [images, setImages] = useState({});
 
   useEffect(() => {
@@ -18,12 +16,12 @@ export default function Footer() {
   }, []);
 
   return (
-    <SFooter
-      className="background"
-      style={{
-        backgroundImage: `url(${images?.background_footer?.src})`,
-      }}
-    >
+    <SFooter className="background">
+      <div
+        style={{
+          backgroundImage: `url(${images?.background_footer?.src})`,
+        }}
+      />
       <div className="links">
         <ul>
           <a href="#map">
@@ -38,28 +36,24 @@ export default function Footer() {
           <a href="#partners">
             <li className="list">{translations.third_section || null}</li>
           </a>
-          <a href="#Contact">
-            <li className="list">{translations.fifth_section || null}</li>
-          </a>
         </ul>
         <div className="date">{translations.date || null}</div>
       </div>
 
       <div className="infos">
         <div>
-          <h3>Edtech Hauts-de-France:</h3>
-          <p>165 Avenue de Bretagne 59000 Lille </p>
+          <h3>Edtech Hauts-de-France</h3>
+
+          <p>
+            165 Avenue de Bretagne <br />
+            59000 Lille
+          </p>
+          <p> </p>
+          <p> </p>
+          <p> </p>
+          <p> </p>
+          <p> </p>
         </div>
-      </div>
-      <div className="copyright">
-        <a
-          className="list"
-          href="https://edtechfrance.fr/mentions-legales/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {translations.cgu || null}
-        </a>
       </div>
     </SFooter>
   );

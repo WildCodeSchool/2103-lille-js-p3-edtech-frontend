@@ -9,11 +9,17 @@ const SFooter = styled.footer`
   padding: 20px;
   display: flex;
   justify-content: flex-end;
-  background-size: cover;
+  background-color: #2c2875;
 
   .infos {
     color: white;
     font-size: 0.9em;
+    line-height: 1.5em;
+  }
+
+  .infos {
+    color: white;
+    font-size: 1em;
     line-height: 1.5em;
   }
   .links {
