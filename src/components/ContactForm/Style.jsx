@@ -17,6 +17,10 @@ const SContact = styled.div`
     }
   }
 
+  .accroche {
+    text-align: center;
+  }
+
   h1 {
     text-align: center;
     font-size: 45px;
@@ -55,7 +59,7 @@ const SContact = styled.div`
     display: flex;
     justify-content: center;
 
-    button {
+    .active {
       border: 2px transparent solid;
       cursor: pointer;
       background-color: ${(props) => props.background_button};
@@ -72,8 +76,34 @@ const SContact = styled.div`
       }
     }
 
-    button:hover {
+    .active:hover,
+    .inactive:hover {
       border: 2px ${(props) => props.background_button_hover} solid;
+    }
+
+    .inactive {
+      border: 2px transparent solid;
+      background-color: green;
+      height: 45px;
+      width: 15%;
+      border-radius: 17px;
+      margin: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #f5f5f5;
+      @media (max-width: 600px) {
+        font-size: 0.5em;
+      }
+    }
+  }
+
+  .RGPD {
+    display: flex;
+    justify-content: center;
+
+    input {
+      width: auto;
+      height: auto;
     }
   }
 `;

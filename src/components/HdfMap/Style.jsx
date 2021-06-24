@@ -9,22 +9,36 @@ const SMap = styled.div`
   height: 40vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   .title-map {
     font-size: 45px;
     font-weight: bold;
-    margin-bottom: 30px;
     text-align: center;
   }
-  .description-map {
-    text-align: center;
-    padding-top: 35px;
-    font-size: 1.1em;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    .description-map {
+      font-size: 1.1em;
+      margin: auto;
+      text-align: center;
+      padding: 10px;
+    }
+    img {
+      max-width: 25%;
+      padding: 10px;
+    }
   }
 
   a {
     text-decoration: none;
-    margin: auto;
+    justify-self: end;
+
     width: 15%;
     height: 45px;
   }
