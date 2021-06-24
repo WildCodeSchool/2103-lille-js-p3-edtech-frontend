@@ -1,11 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
 import SFooter from './Style';
 
 export default function Footer() {
   const [translations, setTranslations] = useState({});
-
   const [images, setImages] = useState({});
 
   useEffect(() => {
@@ -18,12 +16,10 @@ export default function Footer() {
   }, []);
 
   return (
-    <SFooter
-      className="background"
-      style={{
-        backgroundImage: `url(${images?.background_footer?.src})`,
-      }}
-    >
+    <SFooter className="background">
+      <div className="logo">
+        <img src={images?.logo_footer?.src} alt={images?.picto_footer?.alt} />
+      </div>
       <div className="links">
         <ul>
           <a href="#map">
@@ -38,28 +34,23 @@ export default function Footer() {
           <a href="#partners">
             <li className="list">{translations.third_section || null}</li>
           </a>
-          <a href="#Contact">
-            <li className="list">{translations.fifth_section || null}</li>
-          </a>
         </ul>
         <div className="date">{translations.date || null}</div>
       </div>
 
       <div className="infos">
         <div>
-          <h3>Edtech Hauts-de-France:</h3>
-          <p>165 Avenue de Bretagne 59000 Lille </p>
+          <h3>{translations.edtechhdf_title || null}</h3>
+
+          <p>
+            {translations.edtech_adress || null} <br />
+            {translations.edtech_city || null}
+          </p>
+          <p className="inputAdress">{translations.edtech_input1 || null} </p>
+          <p className="inputAdress"> {translations.edtech_input2 || null}</p>
+          <p className="inputAdress">{translations.edtech_input3 || null} </p>
+          <p className="inputAdress">{translations.edtech_input4 || null} </p>
         </div>
-      </div>
-      <div className="copyright">
-        <a
-          className="list"
-          href="https://edtechfrance.fr/mentions-legales/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {translations.cgu || null}
-        </a>
       </div>
     </SFooter>
   );
