@@ -12,24 +12,6 @@ import HdfTwitter from './components/HdfTwitter/HdfTwitter';
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <NavBar />
-      <Slider />
-      <HdfMap />
-      <Members />
-      <Partners />
-      <HdfTwitter />
-      <TwitterTweetEmbed />
-      <TwitterTimelineEmbed />
-      <ContactForm />
-      <Footer />
-    </div>
-  );
-}
-
 dotenv.config();
 
 export default function App() {
@@ -54,5 +36,9 @@ export default function App() {
       setSections(tmpSections);
     });
   }, []);
-  return <div className="App">{sections}</div>;
+  return <div className="App">
+            <TwitterTweetEmbed />
+            <TwitterTimelineEmbed />
+            {sections}
+         </div>;
 }
