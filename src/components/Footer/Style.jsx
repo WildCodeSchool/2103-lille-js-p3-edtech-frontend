@@ -8,18 +8,28 @@ const SFooter = styled.footer`
   font-size: 0.8em;
   padding: 20px;
   display: flex;
-  justify-content: flex-end;
-  background-size: cover;
+  justify-content: space-between;
+  background-color: #2c2875;
+
+  .logo {
+    width: 17%;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
 
   .infos {
     color: white;
     font-size: 0.9em;
     line-height: 1.5em;
   }
+
   .links {
     font-size: 0.9em;
     line-height: 1.5em;
-    margin-right: 15%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,6 +59,10 @@ const SFooter = styled.footer`
   .date {
     color: white;
     font-size: 0.9em;
+  }
+
+  .inputAdress {
+    display: none;
   }
 `;
 
