@@ -1,3 +1,4 @@
+import { TwitterTweetEmbed, TwitterTimelineEmbed } from 'react-twitter-embed';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import dotenv from 'dotenv';
@@ -7,7 +8,6 @@ import NavBar from './components/NavBar/NavBar';
 import HdfMap from './components/HdfMap/HdfMap';
 import Members from './components/Members/Members';
 import Partners from './components/Partners/Partners';
-import Events from './components/Events/Events';
 import HdfTwitter from './components/HdfTwitter/HdfTwitter';
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
@@ -36,5 +36,9 @@ export default function App() {
       setSections(tmpSections);
     });
   }, []);
-  return <div className="App">{sections}</div>;
+  return <div className="App">
+            <TwitterTweetEmbed />
+            <TwitterTimelineEmbed />
+            {sections}
+         </div>;
 }
