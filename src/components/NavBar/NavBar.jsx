@@ -9,6 +9,7 @@ export default function NavBar() {
   const [translations, setTranslations] = useState({});
   const [images, setImages] = useState({});
   const [externeLinks, SetExterneLinks] = useState({});
+  const [colors, setColors] = useState({});
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
@@ -22,9 +23,16 @@ export default function NavBar() {
       .then(({ data }) => {
         SetExterneLinks(data);
       });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
   return (
-    <SNavBar id="navBar">
+    <SNavBar
+      id="navBar"
+      background={colors.navbar_background_color}
+      text={colors.navbar_text_color}
+    >
       <nav>
         <ul>
           <a href="#Actualités">

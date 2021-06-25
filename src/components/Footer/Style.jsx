@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const SFooter = styled.footer`
+  background-color: ${(props) => props.background};
+  color: ${(props) => props.text};
   bottom: 0;
   left: 0;
   right: 0;
@@ -21,7 +23,7 @@ const SFooter = styled.footer`
   }
 
   .infos {
-    color: white;
+    color: ${(props) => props.text};
     font-size: 0.9em;
     line-height: 1.5em;
   }
@@ -36,7 +38,7 @@ const SFooter = styled.footer`
   }
 
   .links a {
-    color: white;
+    color: ${(props) => props.text};
     text-decoration: none;
   }
 
@@ -44,14 +46,14 @@ const SFooter = styled.footer`
     text-align: right;
     line-height: 1.5em;
     width: 15vw;
-    color: white;
+    color: ${(props) => props.text};
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 20px;
   }
 
   .copyright a {
-    color: white;
+    color: ${(props) => props.text};
     text-decoration: none;
     font-size: 0.9em;
   }

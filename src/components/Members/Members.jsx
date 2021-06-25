@@ -11,6 +11,7 @@ export default function Members() {
   const [members, setMembers] = useState([]);
   const [translations, setTranslations] = useState({});
   const [settings, setSettings] = useState({});
+  const [colors, setColors] = useState({});
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/members`).then(({ data }) => {
@@ -24,9 +25,16 @@ export default function Members() {
       .then(({ data }) => {
         setSettings(data);
       });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
   return (
-    <SMembers id="members">
+    <SMembers
+      id="members"
+      background={colors.members_background_color}
+      text={colors.members_text_color}
+    >
       <h1>{translations.second_section}</h1>
       {settings.carousel_duration && (
         <Carousel

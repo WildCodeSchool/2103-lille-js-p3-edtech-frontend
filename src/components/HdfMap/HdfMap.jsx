@@ -8,6 +8,7 @@ dotenv.config();
 export default function HdfMap() {
   const [translations, setTranslations] = useState({});
   const [externeLinks, SetExterneLinks] = useState({});
+  const [colors, setColors] = useState({});
 
   useEffect(() => {
     axios
@@ -18,10 +19,20 @@ export default function HdfMap() {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
       setTranslations(data);
     });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
 
   return (
-    <SMap className="map" id="map">
+    <SMap
+      className="map"
+      id="map"
+      background={colors.map_background_color}
+      text={colors.map_text_color}
+      background_button={colors.map_button_background_color}
+      text_button={colors.map_button_text_color}
+    >
       <h1 className="title-map">{translations.first_section || null}</h1>
       <div className="description">
         <img

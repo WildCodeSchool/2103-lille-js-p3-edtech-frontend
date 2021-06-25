@@ -10,6 +10,7 @@ dotenv.config();
 function Slider() {
   const [sliders, setSliders] = useState([]);
   const [settings, setSettings] = useState({});
+  const [colors, setColors] = useState({});
 
   const properties = {
     duration: settings.slider_duration || 3500,
@@ -28,10 +29,18 @@ function Slider() {
       .then(({ data }) => {
         setSettings(data);
       });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
 
   return (
-    <Sslider className="slide-container" id="slider">
+    <Sslider
+      className="slide-container"
+      id="slider"
+      background={colors.slider_background_color}
+      text={colors.slider_text_color}
+    >
       <Slide {...properties}>
         {sliders.map((slide) => {
           return (
