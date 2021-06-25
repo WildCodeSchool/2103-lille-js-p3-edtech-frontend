@@ -8,6 +8,7 @@ dotenv.config();
 export default function Partners() {
   const [partners, setPartners] = useState([]);
   const [translations, setTranslations] = useState({});
+  const [colors, setColors] = useState({});
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/partners`).then(({ data }) => {
@@ -16,9 +17,16 @@ export default function Partners() {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
       setTranslations(data);
     });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
   return (
-    <SPartners id="partners">
+    <SPartners
+      id="partners"
+      background={colors.partners_background_color}
+      text={colors.partners_text_color}
+    >
       <h1>{translations.third_section || null}</h1>
       <div className="partner-logo">
         {partners.map((partner) => {

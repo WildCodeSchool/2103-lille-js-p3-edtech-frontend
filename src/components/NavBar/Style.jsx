@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const SNavBar = styled.div`
+  background-color: ${(props) => props.background};
   nav {
     display: flex;
     justify-content: space-between;
@@ -24,7 +25,7 @@ const SNavBar = styled.div`
       border-radius: 15px;
       width: 150px;
       padding: 10px;
-      color: #2c2875;
+      color: ${(props) => props.text};
       font-size: 1.5em;
       font-weight: 900;
       text-align: center;
@@ -44,14 +45,14 @@ const SNavBar = styled.div`
       }
 
       img:hover {
-        border: 4px #2c2875 solid;
+        border: 4px ${(props) => props.text} solid;
       }
     }
 
     .actu:hover,
     .contact:hover,
     .join:hover {
-      border: 2px #2c2875 solid;
+      border: 2px ${(props) => props.text} solid;
     }
   }
 `;

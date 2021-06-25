@@ -7,6 +7,8 @@ dotenv.config();
 
 export default function ContactForm() {
   const [translations, setTranslations] = useState({});
+  const [status, setStatus] = useState('Envoyer');
+  const [colors, setColors] = useState({});
   const [isSent, setIsSent] = useState(false);
   const [details, setDetails] = useState({
     firstname: '',
@@ -21,6 +23,9 @@ export default function ContactForm() {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
       setTranslations(data);
+    });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
     });
   }, []);
 
@@ -44,7 +49,18 @@ export default function ContactForm() {
   };
 
   return (
-    <SContact id="Contact">
+    <SContact
+      id="Contact"
+      background={colors.contact_background_color}
+      text={colors.contact_text_color}
+      background_button={colors.contact_button_background_color}
+      background_button_hover={colors.contact_button_background_color_hover}
+      text_button={colors.contact_button_text_color}
+      background_button_inactive={
+        colors.contact_button_background_color_inactive
+      }
+      text_button_inactive={colors.contact_button_text_color_inactive}
+    >
       <h1>{translations.fifth_section || null}</h1>
       <div className="accroche">
         <p>{translations.contact_catchPhrase}</p>

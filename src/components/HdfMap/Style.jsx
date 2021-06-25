@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const SMap = styled.div`
+  background-color: ${(props) => props.background};
   margin-top: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #2c2875;
-  color: #f5f5f5;
+  color: ${(props) => props.text};
   height: 40vh;
   display: flex;
   flex-direction: column;
@@ -46,11 +46,11 @@ const SMap = styled.div`
   button {
     text-align: center;
     font-weight: bold;
-    color: #f5f5f5;
+    color: ${(props) => props.text_button};
     cursor: pointer;
     font-size: 1.2em;
     border: 2px transparent solid;
-    background-color: red;
+    background-color: ${(props) => props.background_button};
     height: 100%;
     width: 100%;
     border-radius: 17px;

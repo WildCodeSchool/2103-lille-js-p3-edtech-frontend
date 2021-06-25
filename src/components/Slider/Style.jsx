@@ -17,7 +17,7 @@ const Sslider = styled.div`
 
   .each-slide .each-text {
     font-size: 1.1em;
-    background-color: rgba(55, 106, 182, 0.664);
+    background-color: ${(props) => props.background};
     text-align: center;
     height: 100%;
     display: flex;
@@ -25,7 +25,7 @@ const Sslider = styled.div`
     align-items: center;
     text-align: justify;
     justify-content: center;
-    color: white;
+    color: ${(props) => props.text};
     width: 50vw;
   }
   .each-img {
