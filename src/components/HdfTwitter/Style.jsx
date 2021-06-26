@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const SActuTwit = styled.div`
-  background-color: #2c2875;
-  color: #f5f5f5;
+  background-color: ${(props) => props.background};
+  color: ${(props) => props.text};
 
   h1 {
     padding: 1rem;
