@@ -17,7 +17,7 @@ const SContact = styled.div`
     }
   }
 
-  .accroche {
+  .catchPhrase {
     text-align: center;
   }
 
@@ -100,10 +100,11 @@ const SContact = styled.div`
   .RGPD {
     display: flex;
     justify-content: center;
+    text-align: center;
 
     input {
-      width: auto;
-      height: auto;
+      width: 15px;
+      height: 30px;
     }
   }
 `;
