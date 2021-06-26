@@ -76,21 +76,20 @@ const SContact = styled.div`
       }
     }
 
-    .active:hover,
-    .inactive:hover {
+    .active:hover {
       border: 2px ${(props) => props.background_button_hover} solid;
     }
 
     .inactive {
       border: 2px transparent solid;
-      background-color: green;
+      background-color: ${(props) => props.background_button_inactive};
       height: 45px;
       width: 15%;
       border-radius: 17px;
       margin: 10px;
       font-size: 1.2em;
       font-weight: bold;
-      color: #f5f5f5;
+      color: ${(props) => props.text_button_inactive};
       @media (max-width: 600px) {
         font-size: 0.5em;
       }
