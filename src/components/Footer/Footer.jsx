@@ -20,10 +20,11 @@ export default function Footer() {
   }, []);
 
   return (
-    <SFooter 
-        className="background"
-        background={colors.footer_background_color}
-        text={colors.footer_text_color}>
+    <SFooter
+      className="background"
+      background={colors.footer_background_color}
+      text={colors.footer_text_color}
+    >
       <div className="logo">
         <img src={images?.logo_footer?.src} alt={images?.picto_footer?.alt} />
       </div>

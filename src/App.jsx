@@ -27,7 +27,6 @@ export default function App() {
         if (section.name === 'HdfMap') nameSection = <HdfMap />;
         if (section.name === 'Members') nameSection = <Members />;
         if (section.name === 'Partners') nameSection = <Partners />;
-        if (section.name === 'Events') nameSection = <Events />;
         if (section.name === 'HdfTwitter') nameSection = <HdfTwitter />;
         if (section.name === 'ContactForm') nameSection = <ContactForm />;
         if (section.name === 'Footer') nameSection = <Footer />;
@@ -36,9 +35,11 @@ export default function App() {
       setSections(tmpSections);
     });
   }, []);
-  return <div className="App">
-            <TwitterTweetEmbed />
-            <TwitterTimelineEmbed />
-            {sections}
-         </div>;
+  return (
+    <div className="App">
+      <TwitterTweetEmbed />
+      <TwitterTimelineEmbed />
+      {sections}
+    </div>
+  );
 }
