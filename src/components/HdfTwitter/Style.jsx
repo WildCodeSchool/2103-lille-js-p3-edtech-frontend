@@ -3,105 +3,70 @@ import styled from 'styled-components';
 const SActuTwit = styled.div`
   background-color: ${(props) => props.background};
   color: ${(props) => props.text};
+  padding: 15px;
 
   h1 {
     padding: 1rem;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
   }
 
-  .ActuTwit {
+  .actuTwit {
     display: flex;
   }
 
-  .twoActus-twit {
+  .actus-twit {
     position: relative;
-    padding: 1.5rem;
+    padding: 25px;
     overflow-y: hidden;
     width: 30%;
   }
 
-  .twoActus {
+  .actus {
     line-height: 1.7;
     font-size: 1.1em;
     width: 70vw;
   }
 
-  .twoActus h1 {
+  h2 {
     font-size: 1.6rem;
-    font-weight: 700;
+    padding: 1rem;
+    font-weight: bold;
     text-align: center;
   }
 
-  .actu1 {
-    display: flex;
+  .actu {
     justify-content: space-around;
     background-color: #2c2875;
     margin-bottom: 10px;
-
     border-radius: 5px;
-    border: 1px greenyellow solid;
+    padding-bottom: 25px;
   }
 
-  .titleAndp {
+  .imgAndp {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+
+    img {
+      height: 10rem;
+      border-radius: 8px;
+    }
   }
 
-  .photo_actu {
-    margin-left: 1rem;
-    margin-top: 4.6rem;
-    height: 10rem;
-    width: 10rem;
-    border-radius: 10px;
-  }
-
-  .actu2 {
-    display: flex;
-  }
-
-  .twoActus a {
+  .actus a {
     text-decoration: underline;
     color: #f5f5f5;
   }
 
-  .twit-title {
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
   .twit-content {
     position: absolute;
     right: 25px;
-    height: 90%;
-    width: 90%;
+    height: 92%;
+    width: 93%;
     overflow-y: scroll;
-    border-radius: 10px;
-  }
-
-  .actu3 {
-    display: none;
-    background-color: #2c2875;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .actu4 {
-    display: none;
-    background-color: #2c2875;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .actu5 {
-    display: none;
-    background-color: #2c2875;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
   }
 `;
 
