@@ -19,12 +19,13 @@ const SActuTwit = styled.div`
     position: relative;
     padding: 1.5rem;
     overflow-y: hidden;
-    width: 100%;
+    width: 30%;
   }
 
   .twoActus {
     line-height: 1.7;
-    font-size: 1.3rem;
+    font-size: 1.1em;
+    width: 70vw;
   }
 
   .twoActus h1 {
@@ -35,6 +36,18 @@ const SActuTwit = styled.div`
 
   .actu1 {
     display: flex;
+    justify-content: space-around;
+    background-color: #2c2875;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+    border: 1px greenyellow solid;
+  }
+
+  .titleAndp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .photo_actu {
@@ -50,7 +63,7 @@ const SActuTwit = styled.div`
   }
 
   .twoActus a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #f5f5f5;
   }
 
@@ -62,20 +75,33 @@ const SActuTwit = styled.div`
   }
   .twit-content {
     position: absolute;
-    height: 100%;
-    width: 95%;
+    right: 25px;
+    height: 90%;
+    width: 90%;
     overflow-y: scroll;
     border-radius: 10px;
   }
 
   .actu3 {
     display: none;
+    background-color: #2c2875;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
   }
   .actu4 {
     display: none;
+    background-color: #2c2875;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
   }
   .actu5 {
     display: none;
+    background-color: #2c2875;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
   }
 `;
 
