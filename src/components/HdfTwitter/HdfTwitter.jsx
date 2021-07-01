@@ -12,7 +12,7 @@ export default function HdfTwitter() {
   const [colors, setColors] = useState({});
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/actus`).then(({ data }) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/actus_img`).then(({ data }) => {
       setActus(data);
     });
     axios
@@ -20,9 +20,11 @@ export default function HdfTwitter() {
       .then(({ data }) => {
         SetExternalLinks(data);
       });
-    axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
-      setTranslations(data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/actus_text`)
+      .then(({ data }) => {
+        setTranslations(data);
+      });
     axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
       setColors(data);
     });
@@ -38,7 +40,7 @@ export default function HdfTwitter() {
       <div className="ActuTwit">
         <div className="twoActus-twit twoActus ">
           <div className="actu1">
-            <div>
+            <div className="titleAndp">
               <h1 className="title-actu">{translations.title_actu1 || null}</h1>
               <p className="content-actu1">
                 {translations.content_actu1 || null}
@@ -54,13 +56,15 @@ export default function HdfTwitter() {
                 </a>
               </p>
             </div>
-            <div>
-              <img
-                className="photo_actu"
-                src={actus?.photo_actu1?.src}
-                alt={actus?.photo_actu1?.alt}
-              />
-            </div>
+            {actus?.photo_actu1?.src && (
+              <div>
+                <img
+                  className="photo_actu"
+                  src={actus?.photo_actu1?.src}
+                  alt={actus?.photo_actu1?.alt}
+                />
+              </div>
+            )}
           </div>
           <div className="actu2">
             <div>
