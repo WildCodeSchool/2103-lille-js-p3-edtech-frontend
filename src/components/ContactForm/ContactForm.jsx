@@ -7,7 +7,6 @@ dotenv.config();
 
 export default function ContactForm() {
   const [translations, setTranslations] = useState({});
-  const [status, setStatus] = useState('Envoyer');
   const [colors, setColors] = useState({});
   const [isSent, setIsSent] = useState(false);
   const [details, setDetails] = useState({
