@@ -17,7 +17,6 @@ export default function ContactForm() {
     email: '',
     message: '',
   });
-  const [selected, setSelected] = useState(false);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
@@ -61,14 +60,14 @@ export default function ContactForm() {
       text_button_inactive={colors.contact_button_text_color_inactive}
     >
       <h1>{translations.fifth_section || null}</h1>
-      <div className="accroche">
+      <div className="catchPhrase">
         <p>{translations.contact_catchPhrase}</p>
       </div>
 
       {isSent ? (
         <div className="button">
           <button type="button" className="inactive">
-            Message envoyé !
+            {translations.contact_messageSent || null}
           </button>
         </div>
       ) : (
@@ -141,7 +140,7 @@ export default function ContactForm() {
               <div className="email">
                 <label htmlFor="email">
                   <input
-                    type="text"
+                    type="email"
                     id="email"
                     name="email"
                     value={details.email}
@@ -170,20 +169,12 @@ export default function ContactForm() {
             </div>
           </div>
           <div className="RGPD">
-            <input
-              type="checkbox"
-              onChange={(e) => setSelected(e.target.checked)}
-              required
-            />
-            <span>
-              {selected
-                ? "J'accepte de partager mes informations à l'association edTech HdF"
-                : 'Veuillez valider vos données RGBD'}
-            </span>
+            <input type="checkbox" required />
+            <p>{translations.RGPD || null}</p>
           </div>
           <div className="button">
             <button type="submit" className="active" disabled={handleSubmit}>
-              Envoyer
+              {translations.contact_sendMessage || null}
             </button>
           </div>
         </form>

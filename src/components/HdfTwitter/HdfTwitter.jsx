@@ -9,6 +9,7 @@ export default function HdfTwitter() {
   const [actus, setActus] = useState({});
   const [translations, setTranslations] = useState({});
   const [externalLinks, SetExternalLinks] = useState({});
+  const [colors, setColors] = useState({});
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/actus`).then(({ data }) => {
@@ -22,10 +23,17 @@ export default function HdfTwitter() {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
       setTranslations(data);
     });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
 
   return (
-    <SActuTwit id="Actualités">
+    <SActuTwit
+      id="Actualités"
+      background={colors.hdfTwitter_background_color}
+      text={colors.hdfTwitter_text_color}
+    >
       <h1 id="actualites">{translations.fourth_section || null}</h1>
       <div className="ActuTwit">
         <div className="twoActus-twit twoActus ">

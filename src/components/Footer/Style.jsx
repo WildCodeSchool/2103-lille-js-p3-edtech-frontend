@@ -11,7 +11,6 @@ const SFooter = styled.footer`
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  background-color: #2c2875;
 
   .logo {
     width: 17%;
@@ -19,7 +18,7 @@ const SFooter = styled.footer`
 
   .logo img {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   .infos {
