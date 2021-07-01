@@ -42,11 +42,6 @@ export default function HdfTwitter() {
       id="Actualités"
       background={colors.hdfTwitter_background_color}
       text={colors.hdfTwitter_text_color}
-      display_actu1={translations.display_actu1}
-      display_actu2={translations.display_actu2}
-      display_actu3={translations.display_actu3}
-      display_actu4={translations.display_actu4}
-      display_actu5={translations.display_actu5}
     >
       <h1 id="actualites">{translations.fourth_section || null}</h1>
       <div className="actuTwit">
