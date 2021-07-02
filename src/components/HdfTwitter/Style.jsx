@@ -46,12 +46,17 @@ const SActuTwit = styled.div`
 
   .imgAndp {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     img {
+      margin: 30px 30px 0px 0px;
       height: 10rem;
       border-radius: 8px;
+    }
+
+    p {
+      margin: 30px 30px 0px 30px;
     }
   }
 
