@@ -13,15 +13,6 @@ export default function HdfTwitter() {
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/actus`).then(({ data }) => {
-      // const newActus = data.map((actu) => {
-      //   const newActu = { ...actu };
-      //   const [myDate, myTime] = actu.date_time.split('T');
-      //   const myDateArr = myDate.split('-');
-      //   const myFrDate = `${myDateArr[2]}.${myDateArr[1]}.${myDateArr[0]}`;
-      //   const myTimeHour = myTime.substring(0, 5);
-      //   newActu.date = `${myFrDate} à ${myTimeHour}`;
-      //   return newActu;
-      // });
       setActus(data);
     });
     axios
