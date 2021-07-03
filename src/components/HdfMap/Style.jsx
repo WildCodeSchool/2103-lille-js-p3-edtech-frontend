@@ -38,9 +38,8 @@ const SMap = styled.div`
   a {
     text-decoration: none;
     justify-self: end;
-
-    width: 15%;
-    height: 45px;
+    width: auto;
+    height: 5vh;
   }
 
   button {

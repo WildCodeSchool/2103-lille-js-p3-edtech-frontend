@@ -13,6 +13,9 @@ const SPartners = styled.div`
   }
 
   .partner-logo {
+    @media (max-width: 400px) {
+      display: none;
+    }
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -26,6 +29,38 @@ const SPartners = styled.div`
       img {
         filter: grayscale(100%);
         max-width: 100%;
+      }
+      img:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+  .Carousel {
+    @media (min-width: 400px) {
+      display: none;
+    }
+    margin: auto;
+    height: 20vh;
+    .react-multiple-carousel__arrow--left {
+      left: 10px;
+    }
+    .react-multiple-carousel__arrow--right {
+      right: 10px;
+    }
+    .slide {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      margin: auto;
+      width: 20vw;
+      height: 15vh;
+
+      img {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        filter: grayscale(100%);
+        margin: auto;
       }
       img:hover {
         filter: grayscale(0%);
