@@ -11,9 +11,12 @@ const SNewsletter = styled.div`
   align-items: center;
 
   .title-newsletter {
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: bold;
     text-align: center;
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 
   .description-newsletter {

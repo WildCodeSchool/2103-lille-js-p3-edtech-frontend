@@ -7,9 +7,12 @@ const SActuTwit = styled.div`
 
   h1 {
     padding: 1rem;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: bold;
     text-align: center;
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 
   .actuTwit {

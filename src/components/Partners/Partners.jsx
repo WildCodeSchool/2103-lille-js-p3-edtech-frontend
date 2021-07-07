@@ -81,7 +81,7 @@ export default function Partners() {
                 max: 464,
                 min: 0,
               },
-              items: 1,
+              items: 2,
               partialVisibilityGutter: 30,
             },
             tablet: {
@@ -89,7 +89,7 @@ export default function Partners() {
                 max: 1024,
                 min: 464,
               },
-              items: 2,
+              items: 3,
               partialVisibilityGutter: 30,
             },
           }}

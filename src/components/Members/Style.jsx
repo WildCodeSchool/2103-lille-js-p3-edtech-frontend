@@ -7,9 +7,12 @@ const SMembers = styled.div`
   padding-bottom: 20px;
   h1 {
     text-align: center;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 30px;
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
   .Carousel {
     margin: auto;
