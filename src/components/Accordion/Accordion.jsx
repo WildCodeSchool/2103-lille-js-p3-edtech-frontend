@@ -31,11 +31,11 @@ function Accordeon() {
             <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <p>{slide.title}</p>
+                  <h2>{slide.title}</h2>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                <p>{slide.subtext}</p>
+                <p className="subtext">{slide.subtext}</p>
               </AccordionItemPanel>
             </AccordionItem>
           );

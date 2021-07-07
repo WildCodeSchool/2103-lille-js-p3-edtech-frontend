@@ -5,28 +5,28 @@ const SAccord = styled.div`
     display: none;
   }
 
-  .sc-gtsrHT bnWiUp {
-    width: 80%;
-    margin: auto;
-  }
-
   .accordion {
-    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-  }
-
-  .accordion__item + .accordion__item {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    border: none;
   }
 
   .accordion__button {
+    display: flex;
     background-color: #0b267c;
     color: #ddd;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    padding-right: 0px;
+    padding-left: 18px;
     text-align: left;
-    border: none;
+    width: inherit;
+  }
+
+  .accordion__item {
+    width: 100%;
   }
 
   .accordion__button:hover {
@@ -49,12 +49,22 @@ const SAccord = styled.div`
     transform: rotate(45deg);
   }
 
+  h2 {
+    align-content: center;
+    font-size: 0.9em;
+  }
+
+  .subtext {
+    font-size: 0.9em;
+    text-align: justify;
+  }
+
   [hidden] {
     display: none;
   }
 
   .accordion__panel {
-    padding: 20px;
+    padding: 15px;
     animation: fadein 0.35s ease-in;
   }
 
