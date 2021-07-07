@@ -35,19 +35,26 @@ export default function NavBar() {
     >
       <nav>
         <ul>
-          <a href="#Actualités">
-            <li className="actu">{translations.first_btn || null}</li>
-          </a>
-          <a
-            href={externeLinks?.link_helloasso}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <li className="join">{translations.second_btn || null}</li>
-          </a>
-          <a href="#Contact">
-            <li className="contact">{translations.third_btn || null}</li>
-          </a>
+          <div className="actu-join">
+            <a href="#Actualités">
+              <li className="actu">{translations.first_btn || null}</li>
+            </a>
+            <a
+              href={externeLinks?.link_helloasso}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li className="join">{translations.second_btn || null}</li>
+            </a>
+          </div>
+          <div className="contact-slid">
+            <a href="#Contact">
+              <li className="contact">{translations.third_btn || null}</li>
+            </a>
+            <a href="#Slider">
+              <li className="presentation">Présentation</li>
+            </a>
+          </div>
         </ul>
 
         <div className="pictos">
@@ -71,6 +78,7 @@ export default function NavBar() {
               alt={images?.picto_facebook?.alt}
             />
           </a>
+
           <a
             href={externeLinks?.link_linkedIn}
             target="_blank"
