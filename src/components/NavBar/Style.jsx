@@ -8,15 +8,32 @@ const SNavBar = styled.div`
     align-items: center;
 
     ul {
-      margin-left: 30px;
-      list-style: none;
       display: flex;
-      width: 50%;
-      justify-content: space-between;
 
       a {
         text-decoration: inherit;
         color: inherit;
+      }
+    }
+
+    .actu-join {
+      display: flex;
+
+      li {
+        margin-left: 30px;
+      }
+
+      .actu {
+        margin-right: 150px;
+      }
+    }
+
+    .contact-slid {
+      display: flex;
+      margin-left: 180px;
+
+      .presentation {
+        display: none;
       }
     }
 
@@ -53,6 +70,63 @@ const SNavBar = styled.div`
     .contact:hover,
     .join:hover {
       border: 2px ${(props) => props.text} solid;
+    }
+  }
+  @media (max-width: 400px) {
+    nav {
+      flex-direction: column;
+
+      ul {
+        margin-top: 10px;
+
+        li {
+          font-size: 1em;
+        }
+      }
+
+      .pictos img:hover {
+        border: 4px transparent solid;
+      }
+
+      .pictos {
+        width: 100%;
+      }
+
+      .actu-join {
+        flex-direction: column;
+        margin-left: 0;
+
+        li {
+          margin-left: 0;
+        }
+
+        .actu {
+          margin-right: 0;
+        }
+      }
+
+      .contact-slid {
+        flex-direction: column;
+        margin-left: 0;
+
+        li {
+          margin-left: 20px;
+        }
+
+        .contact {
+          margin-left: 7px;
+        }
+
+        .presentation {
+          display: flex;
+        }
+      }
+
+      .actu:hover,
+      .contact:hover,
+      .join:hover {
+        border: 2px transparent solid;
+      }
     }
   }
 `;
