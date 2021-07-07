@@ -27,7 +27,10 @@ const SMembers = styled.div`
       margin: auto;
       width: 10vw;
       height: 15vh;
-
+      @media (max-width: 600px) {
+        width: 30vw;
+        height: 35vh;
+      }
       img {
         display: block;
         max-height: 100%;

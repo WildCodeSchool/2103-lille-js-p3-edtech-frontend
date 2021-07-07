@@ -2,6 +2,7 @@ import { TwitterTweetEmbed, TwitterTimelineEmbed } from 'react-twitter-embed';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import ScrollToTop from 'react-scroll-to-top';
 import Header from './components/Header/Header';
 import Slider from './components/Slider/Slider';
 import NavBar from './components/NavBar/NavBar';
@@ -11,6 +12,7 @@ import Partners from './components/Partners/Partners';
 import HdfTwitter from './components/HdfTwitter/HdfTwitter';
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
+import Newsletter from './components/Newsletter/Newsletter';
 
 dotenv.config();
 
@@ -30,6 +32,7 @@ export default function App() {
         if (section.name === 'Partners') nameSection = <Partners />;
         if (section.name === 'HdfTwitter') nameSection = <HdfTwitter />;
         if (section.name === 'ContactForm') nameSection = <ContactForm />;
+        if (section.name === 'Newsletter') nameSection = <Newsletter />;
         if (section.name === 'Footer') nameSection = <Footer />;
         return nameSection;
       });
@@ -41,6 +44,16 @@ export default function App() {
       <TwitterTweetEmbed />
       <TwitterTimelineEmbed />
       {sections}
+      <ScrollToTop
+        smooth
+        color="white"
+        style={{
+          backgroundColor: 'red',
+          borderRadius: '100%',
+          height: '30px',
+          width: '30px',
+        }}
+      />
     </div>
   );
 }

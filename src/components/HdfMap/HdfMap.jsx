@@ -9,6 +9,7 @@ export default function HdfMap() {
   const [translations, setTranslations] = useState({});
   const [externeLinks, SetExterneLinks] = useState({});
   const [colors, setColors] = useState({});
+  const [images, setImages] = useState({});
 
   useEffect(() => {
     axios
@@ -18,6 +19,9 @@ export default function HdfMap() {
       });
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
       setTranslations(data);
+    });
+    axios.get(`${process.env.REACT_APP_API_URL}/images`).then(({ data }) => {
+      setImages(data);
     });
     axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
       setColors(data);
@@ -34,16 +38,21 @@ export default function HdfMap() {
       text_button={colors.map_button_text_color}
     >
       <h1 className="title-map">{translations.first_section || null}</h1>
-      <div className="description">
-        <img
-          src="https://images-ext-2.discordapp.net/external/axV4qu9QBHztGjzsXzkSSh7lXPuoN3Cvv4iQmidOUAE/%3Fw%3D1120%26h%3D490%26q%3D70%26fm%3Dwebp%26fit%3Dfill/https/images.france.fr/zeaejvyq9bhj/dAZLYQVKQoU6a8gUeU0Mi/02f9938c1c421a313d6b238f670d2ab6/article_ImP_Lille-NordFrance_1120x490.jpg"
-          alt="map"
-        />
-        <p className="description-map">
-          {translations.description_map || null}
-        </p>
-      </div>
-
+      {translations.isImgMapFirst === 'true' ? (
+        <div className="description">
+          <img src={images?.img_map?.src} alt={images?.img_map?.alt} />
+          <p className="description-map">
+            {translations.description_map || null}
+          </p>
+        </div>
+      ) : (
+        <div className="description">
+          <p className="description-map">
+            {translations.description_map || null}
+          </p>
+          <img src={images?.img_map?.src} alt={images?.img_map?.alt} />
+        </div>
+      )}
       <a
         className="link-map"
         href={externeLinks?.link_map}
@@ -51,7 +60,7 @@ export default function HdfMap() {
         rel="noreferrer"
       >
         <button type="button" className="btn-map">
-          Lien vers la carte
+          {translations.btn_map}
         </button>
       </a>
     </SMap>
