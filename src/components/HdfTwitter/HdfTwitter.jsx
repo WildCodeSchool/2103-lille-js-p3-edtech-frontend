@@ -36,7 +36,7 @@ export default function HdfTwitter() {
     >
       <h1 id="actualites">{translations.fourth_section || null}</h1>
       <div className="actuTwit">
-        <div className="actus-twit actus ">
+        <div className=" actus ">
           {actus.map((actu) => {
             return (
               actu.is_active === 'true' && (
@@ -74,18 +74,17 @@ export default function HdfTwitter() {
             );
           })}
         </div>
-        <div className="actus-twit">
-          <div className="twit-content">
-            <a
-              className="twitter-timeline"
-              data-width="100vw"
-              data-dnt="true"
-              href={externalLinks?.link_twitter}
-            >
-              {translations.twitter || null}
-            </a>
-            <script src={externalLinks?.link_widget} />
-          </div>
+
+        <div className="twit-content">
+          <a
+            className="twitter-timeline"
+            data-width="100vw"
+            data-dnt="true"
+            href={externalLinks?.link_twitter}
+          >
+            {translations.twitter || null}
+          </a>
+          <script src={externalLinks?.link_widget} />
         </div>
       </div>
     </SActuTwit>
