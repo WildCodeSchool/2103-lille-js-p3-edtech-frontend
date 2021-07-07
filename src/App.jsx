@@ -2,6 +2,7 @@ import { TwitterTweetEmbed, TwitterTimelineEmbed } from 'react-twitter-embed';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import ScrollToTop from 'react-scroll-to-top';
 import Header from './components/Header/Header';
 import Slider from './components/Slider/Slider';
 import NavBar from './components/NavBar/NavBar';
@@ -42,6 +43,16 @@ export default function App() {
       <TwitterTweetEmbed />
       <TwitterTimelineEmbed />
       {sections}
+      <ScrollToTop
+        smooth
+        color="white"
+        style={{
+          backgroundColor: 'red',
+          borderRadius: '100%',
+          height: '30px',
+          width: '30px',
+        }}
+      />
     </div>
   );
 }
