@@ -44,7 +44,7 @@ export default function Partners() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={partner.logo_src} alt={partner.logo_alt} />
+              <img src={partner.logoSrc} alt={partner.logoAlt} />
             </a>
           );
         })}

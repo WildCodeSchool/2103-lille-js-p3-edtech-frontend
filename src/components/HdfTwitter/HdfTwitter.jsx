@@ -39,7 +39,7 @@ export default function HdfTwitter() {
         <div className="actus-twit actus ">
           {actus.map((actu) => {
             return (
-              actu.is_active === 'true' && (
+              actu.isActive === 'true' && (
                 <div className="actu" id="actu1">
                   <div className="title-actu">
                     <h2>{actu.title || null}</h2>
@@ -59,12 +59,12 @@ export default function HdfTwitter() {
                       </p>
                     </div>
 
-                    {actu.img_src && (
+                    {actu.imgSrc && (
                       <div>
                         <img
                           className="photo_actu"
-                          src={actu.img_src || null}
-                          alt={actu.img_alt || null}
+                          src={actu.imgSrc || null}
+                          alt={actu.imgAlt || null}
                         />
                       </div>
                     )}
