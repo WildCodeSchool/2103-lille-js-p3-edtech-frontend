@@ -11,6 +11,7 @@ import Partners from './components/Partners/Partners';
 import HdfTwitter from './components/HdfTwitter/HdfTwitter';
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
+import Newsletter from './components/Newsletter/Newsletter';
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ export default function App() {
         if (section.name === 'Partners') nameSection = <Partners />;
         if (section.name === 'HdfTwitter') nameSection = <HdfTwitter />;
         if (section.name === 'ContactForm') nameSection = <ContactForm />;
+        if (section.name === 'Newsletter') nameSection = <Newsletter />;
         if (section.name === 'Footer') nameSection = <Footer />;
         return nameSection;
       });
