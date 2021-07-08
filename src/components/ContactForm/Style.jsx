@@ -109,5 +109,25 @@ const SContact = styled.div`
       height: 30px;
     }
   }
+
+  @media (max-width: 450px) {
+    .container {
+      width: inherit;
+      padding: 0;
+    }
+
+    .firstBloc,
+    .secondBloc {
+      width: inherit;
+    }
+
+    input {
+      padding: 5px;
+      border-radius: 20px;
+    }
+    .button {
+      width: 100%;
+    }
+  }
 `;
 export default SContact;
