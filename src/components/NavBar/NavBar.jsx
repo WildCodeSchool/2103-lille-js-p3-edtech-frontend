@@ -58,14 +58,13 @@ export default function NavBar() {
             <a href="#Contact">
               <li className="contact">{translations.third_btn || null}</li>
             </a>
-            <a href="#presentation">
-              <input
-                type="button"
-                value="Présentation"
-                onClick={showAccordion}
-                className="presentation"
-              />
-            </a>
+
+            <input
+              type="button"
+              value="Présentation"
+              onClick={showAccordion}
+              className="presentation"
+            />
           </div>
         </ul>
 
@@ -109,7 +108,7 @@ export default function NavBar() {
           </a>
         </div>
       </nav>
-      {accordion ? <Accordeon /> : null}
+      {accordion === true ? <Accordeon /> : null}
     </SNavBar>
   );
 }

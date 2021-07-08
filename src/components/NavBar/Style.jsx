@@ -87,12 +87,13 @@ const SNavBar = styled.div`
       .presentation {
         border: 2px transparent solid;
         background-color: transparent;
+        cursor: pointer;
         border-radius: 15px;
         width: inherit;
-        padding: 10px;
+        padding: 7px;
         color: ${(props) => props.text};
         font-family: 'Merriweather', serif;
-        font-size: 1.1rem;
+        font-size: 1.08rem;
         font-weight: 700;
       }
 
