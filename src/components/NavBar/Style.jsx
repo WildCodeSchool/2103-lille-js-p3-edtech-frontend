@@ -84,6 +84,18 @@ const SNavBar = styled.div`
         }
       }
 
+      .presentation {
+        border: 2px transparent solid;
+        background-color: transparent;
+        border-radius: 15px;
+        width: inherit;
+        padding: 10px;
+        color: ${(props) => props.text};
+        font-family: 'Merriweather', serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
       .pictos img:hover {
         border: 4px transparent solid;
       }
@@ -114,7 +126,8 @@ const SNavBar = styled.div`
         }
 
         .contact {
-          margin-left: 7px;
+          padding-left: 0;
+          margin-left: 0;
         }
 
         .presentation {

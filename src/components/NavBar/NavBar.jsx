@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import dotenv from 'dotenv';
+import Accordeon from '../Accordion/Accordion';
 import SNavBar from './Style';
 
 dotenv.config();
@@ -10,6 +11,12 @@ export default function NavBar() {
   const [images, setImages] = useState({});
   const [externeLinks, SetExterneLinks] = useState({});
   const [colors, setColors] = useState({});
+  const [accordion, setAccordion] = useState(false);
+
+  const showAccordion = (e) => {
+    e.preventDefault();
+    setAccordion(true);
+  };
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
@@ -51,8 +58,13 @@ export default function NavBar() {
             <a href="#Contact">
               <li className="contact">{translations.third_btn || null}</li>
             </a>
-            <a href="#Slider">
-              <li className="presentation">Présentation</li>
+            <a href="#presentation">
+              <input
+                type="button"
+                value="Présentation"
+                onClick={showAccordion}
+                className="presentation"
+              />
             </a>
           </div>
         </ul>
@@ -97,6 +109,7 @@ export default function NavBar() {
           </a>
         </div>
       </nav>
+      {accordion ? <Accordeon /> : null}
     </SNavBar>
   );
 }

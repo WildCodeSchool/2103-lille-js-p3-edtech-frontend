@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const SAccord = styled.div`
-  @media (min-width: 600px) {
+  @media (min-width: 400px) {
     display: none;
   }
 
   .accordion {
     border-radius: 2px;
-    width: 50%;
+    width: 80%;
     margin: auto;
     border: none;
   }
