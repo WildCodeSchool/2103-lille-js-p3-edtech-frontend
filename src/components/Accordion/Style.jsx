@@ -14,8 +14,8 @@ const SAccord = styled.div`
 
   .accordion__button {
     display: flex;
-    background-color: #0b267c;
-    color: #ddd;
+    background-color: ${(props) => props.background};
+    color: ${(props) => props.text};
     cursor: pointer;
     padding-bottom: 18px;
     padding-top: 18px;
@@ -30,7 +30,7 @@ const SAccord = styled.div`
   }
 
   .accordion__button:hover {
-    background-color: #0b267c;
+    background-color: ${(props) => props.background};
   }
 
   .accordion__button:before {
@@ -55,6 +55,7 @@ const SAccord = styled.div`
   }
 
   .subtext {
+    color: ${(props) => props.background};
     font-size: 0.9em;
     text-align: justify;
   }

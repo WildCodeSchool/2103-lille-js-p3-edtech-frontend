@@ -33,6 +33,8 @@ export default function HdfTwitter() {
       id="Actualités"
       background={colors.hdfTwitter_background_color}
       text={colors.hdfTwitter_text_color}
+      background_actu={colors.actu_background_color}
+      link_actu={colors.actu_link_color}
     >
       <h1 id="actualites">{translations.fourth_section || null}</h1>
       <div className="actuTwit">

@@ -102,7 +102,7 @@ export default function Partners() {
             return (
               <div key={partner.id} className="slide">
                 <a href={partner.link} target="_blank" rel="noreferrer">
-                  <img src={partner.logo_src} alt={partner.logo_alt} />
+                  <img src={partner.logoSrc} alt={partner.logoAlt} />
                 </a>
               </div>
             );
