@@ -71,9 +71,56 @@ const SNavBar = styled.div`
     .join:hover {
       border: 2px ${(props) => props.text} solid;
     }
-  }
-  @media (max-width: 400px) {
-    nav {
+    @media (max-width: 950px) and (min-width: 780px) {
+      .actu-join {
+        li {
+          margin-left: 5px;
+        }
+
+        .actu {
+          margin-right: 0;
+        }
+      }
+
+      .contact-slid {
+        margin-left: 0;
+      }
+      .pictos {
+        width: 40%;
+      }
+    }
+
+    @media (max-width: 770px) and (min-width: 400px) {
+      li {
+        margin-left: 0px;
+        font-size: 1.1em;
+      }
+      .actu-join {
+        li {
+          margin-left: 0;
+        }
+
+        .actu {
+          margin-right: 0;
+        }
+      }
+
+      .contact-slid {
+        margin-left: 0;
+      }
+
+      .pictos {
+        width: 20%;
+        margin-right: 35px;
+
+        img {
+          border-radius: 35px;
+          width: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 440px) {
       flex-direction: column;
 
       ul {

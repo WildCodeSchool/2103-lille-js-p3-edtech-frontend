@@ -108,7 +108,7 @@ export default function NavBar() {
           </a>
         </div>
       </nav>
-      {accordion === true ? <Accordeon /> : null}
+      {accordion ? <Accordeon /> : null}
     </SNavBar>
   );
 }
