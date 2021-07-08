@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const Sslider = styled.div`
+  @media (max-width: 400px) {
+    display: none;
+  }
   .each-slide {
     position: relative;
     height: 50vh;
