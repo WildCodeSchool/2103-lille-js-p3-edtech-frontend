@@ -89,7 +89,7 @@ export default function Members() {
             return (
               <div key={member.id} className="slide">
                 <a href={member.link} target="_blank" rel="noreferrer">
-                  <img src={member.logo_src} alt={member.logo_alt} />
+                  <img src={member.logoSrc} alt={member.logoAlt} />
                 </a>
               </div>
             );
