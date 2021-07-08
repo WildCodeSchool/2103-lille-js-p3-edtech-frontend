@@ -36,10 +36,10 @@ export default function HdfTwitter() {
     >
       <h1 id="actualites">{translations.fourth_section || null}</h1>
       <div className="actuTwit">
-        <div className="actus-twit actus ">
+        <div className=" actus ">
           {actus.map((actu) => {
             return (
-              actu.is_active === 'true' && (
+              actu.isActive === 'true' && (
                 <div className="actu" id="actu1">
                   <div className="title-actu">
                     <h2>{actu.title || null}</h2>
@@ -59,12 +59,12 @@ export default function HdfTwitter() {
                       </p>
                     </div>
 
-                    {actu.img_src && (
+                    {actu.imgSrc && (
                       <div>
                         <img
                           className="photo_actu"
-                          src={actu.img_src || null}
-                          alt={actu.img_alt || null}
+                          src={actu.imgSrc || null}
+                          alt={actu.imgAlt || null}
                         />
                       </div>
                     )}
@@ -74,18 +74,17 @@ export default function HdfTwitter() {
             );
           })}
         </div>
-        <div className="actus-twit">
-          <div className="twit-content">
-            <a
-              className="twitter-timeline"
-              data-width="100vw"
-              data-dnt="true"
-              href={externalLinks?.link_twitter}
-            >
-              {translations.twitter || null}
-            </a>
-            <script src={externalLinks?.link_widget} />
-          </div>
+
+        <div className="twit-content">
+          <a
+            className="twitter-timeline"
+            data-width="100vw"
+            data-dnt="true"
+            href={externalLinks?.link_twitter}
+          >
+            {translations.twitter || null}
+          </a>
+          <script src={externalLinks?.link_widget} />
         </div>
       </div>
     </SActuTwit>

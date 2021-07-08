@@ -68,7 +68,7 @@ export default function Members() {
                 max: 464,
                 min: 0,
               },
-              items: 1,
+              items: 2,
               partialVisibilityGutter: 30,
             },
             tablet: {
@@ -76,7 +76,7 @@ export default function Members() {
                 max: 1024,
                 min: 464,
               },
-              items: 2,
+              items: 3,
               partialVisibilityGutter: 30,
             },
           }}
@@ -89,7 +89,7 @@ export default function Members() {
             return (
               <div key={member.id} className="slide">
                 <a href={member.link} target="_blank" rel="noreferrer">
-                  <img src={member.logo_src} alt={member.logo_alt} />
+                  <img src={member.logoSrc} alt={member.logoAlt} />
                 </a>
               </div>
             );

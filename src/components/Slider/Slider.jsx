@@ -47,7 +47,7 @@ function Slider() {
             <div key={slide.id} className="each-slide">
               <div
                 className="each-img"
-                style={{ backgroundImage: `url(${slide.img_src})` }}
+                style={{ backgroundImage: `url(${slide.imgSrc})` }}
               />
               <div className="each-text">
                 <div>

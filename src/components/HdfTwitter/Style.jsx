@@ -7,26 +7,24 @@ const SActuTwit = styled.div`
 
   h1 {
     padding: 1rem;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: bold;
     text-align: center;
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 
   .actuTwit {
     display: flex;
-  }
-
-  .actus-twit {
     position: relative;
-    padding: 25px;
-    overflow-y: hidden;
-    width: 30%;
   }
 
   .actus {
     line-height: 1.7;
-    font-size: 1.1em;
-    width: 70vw;
+    font-size: 1.1rem;
+    width: 66%;
+    margin: 10px;
   }
 
   h2 {
@@ -67,11 +65,49 @@ const SActuTwit = styled.div`
 
   .twit-content {
     position: absolute;
-    right: 25px;
-    height: 92%;
-    width: 93%;
+    right: 1%;
+    top: 0.8rem;
+    height: 96%;
+    width: 30%;
     overflow-y: scroll;
     border-radius: 8px;
+  }
+
+  @media (max-width: 950px) {
+    .imgAndp {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        margin: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 0;
+
+    .actuTwit {
+      width: inherit;
+    }
+    .actus {
+      padding: 10px;
+      width: inherit;
+      font-size: 0.7rem;
+    }
+
+    .imgAndp {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        margin: 15px;
+      }
+    }
+
+    .twit-content {
+      display: none;
+    }
   }
 `;
 

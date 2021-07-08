@@ -26,7 +26,6 @@ export default function App() {
         if (section.name === 'Header') nameSection = <Header />;
         if (section.name === 'NavBar') nameSection = <NavBar />;
         if (section.name === 'Slider') nameSection = <Slider />;
-
         if (section.name === 'HdfMap') nameSection = <HdfMap />;
         if (section.name === 'Members') nameSection = <Members />;
         if (section.name === 'Partners') nameSection = <Partners />;
