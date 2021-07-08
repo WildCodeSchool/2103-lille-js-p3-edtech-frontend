@@ -7,9 +7,12 @@ const SPartners = styled.div`
   padding-bottom: 20px;
   h1 {
     text-align: center;
-    font-size: 45px;
+    font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 30px;
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 
   .partner-logo {
@@ -52,8 +55,8 @@ const SPartners = styled.div`
       align-items: center;
       overflow: hidden;
       margin: auto;
-      width: 20vw;
-      height: 15vh;
+      width: 30vw;
+      height: 25vh;
 
       img {
         display: block;
