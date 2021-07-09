@@ -67,6 +67,7 @@ export default function Partners() {
           minimumTouchDrag={80}
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
+          removeArrowOnDeviceType={['tablet', 'mobile']}
           responsive={{
             desktop: {
               breakpoint: {

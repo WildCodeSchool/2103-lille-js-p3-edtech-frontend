@@ -5,6 +5,7 @@ const SAccord = styled.div`
     display: none;
   }
 
+  padding: 20px;
   .accordion {
     border-radius: 2px;
     width: 50%;
