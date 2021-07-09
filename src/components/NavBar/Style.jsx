@@ -32,7 +32,7 @@ const SNavBar = styled.div`
       display: flex;
       margin-left: 180px;
 
-      .presentation {
+      .accordion {
         display: none;
       }
     }
@@ -131,7 +131,7 @@ const SNavBar = styled.div`
         }
       }
 
-      .presentation {
+      .accordion {
         border: 2px transparent solid;
         background-color: transparent;
         cursor: pointer;
@@ -178,7 +178,7 @@ const SNavBar = styled.div`
           margin-left: 0;
         }
 
-        .presentation {
+        .accordion {
           display: flex;
         }
       }
