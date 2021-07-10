@@ -36,7 +36,7 @@ const SActuTwit = styled.div`
 
   .actu {
     justify-content: space-around;
-    background-color: #2c2875;
+    background-color: ${(props) => props.background_actu};
     margin-bottom: 10px;
     border-radius: 5px;
     padding-bottom: 25px;
@@ -60,7 +60,7 @@ const SActuTwit = styled.div`
 
   .actus a {
     text-decoration: underline;
-    color: #f5f5f5;
+    color: ${(props) => props.link_actu};
   }
 
   .twit-content {
