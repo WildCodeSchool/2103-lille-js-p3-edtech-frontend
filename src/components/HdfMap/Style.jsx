@@ -11,6 +11,10 @@ const SMap = styled.div`
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: 600px) {
+    margin-top: 0;
+  }
+
   .title-map {
     font-size: 2.8rem;
     font-weight: bold;

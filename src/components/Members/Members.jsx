@@ -54,6 +54,7 @@ export default function Members() {
           minimumTouchDrag={80}
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
+          removeArrowOnDeviceType={['tablet', 'mobile']}
           responsive={{
             desktop: {
               breakpoint: {
