@@ -9,7 +9,7 @@ import NavBar from './components/NavBar/NavBar';
 import HdfMap from './components/HdfMap/HdfMap';
 import Members from './components/Members/Members';
 import Partners from './components/Partners/Partners';
-import HdfTwitter from './components/HdfTwitter/HdfTwitter';
+import Actus from './components/Actus/Actus';
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
 import Newsletter from './components/Newsletter/Newsletter';
@@ -30,7 +30,7 @@ export default function App() {
         if (section.name === 'HdfMap') nameSection = <HdfMap />;
         if (section.name === 'Members') nameSection = <Members />;
         if (section.name === 'Partners') nameSection = <Partners />;
-        if (section.name === 'HdfTwitter') nameSection = <HdfTwitter />;
+        if (section.name === 'HdfTwitter') nameSection = <Actus />;
         if (section.name === 'ContactForm') nameSection = <ContactForm />;
         if (section.name === 'Newsletter') nameSection = <Newsletter />;
         if (section.name === 'Footer') nameSection = <Footer />;
