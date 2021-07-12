@@ -2,8 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import dotenv from 'dotenv';
 import { Slide } from 'react-slideshow-image';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+import 'react-accessible-accordion/dist/fancy-example.css';
 import 'react-slideshow-image/dist/styles.css';
-import Sslider from './Style';
+import { SAccord, Sslider } from './Style';
 
 dotenv.config();
 
@@ -35,31 +44,51 @@ function Slider() {
   }, []);
 
   return (
-    <Sslider
-      className="slide-container"
-      id="slider"
-      background={colors.slider_background_color}
-      text={colors.slider_text_color}
-    >
-      <Slide {...properties}>
-        {sliders.map((slide) => {
-          return (
-            <div key={slide.id} className="each-slide">
-              <div
-                className="each-img"
-                style={{ backgroundImage: `url(${slide.imgSrc})` }}
-              />
-              <div className="each-text">
-                <div>
-                  <h2 className="each-title">{slide.title}</h2>
-                  <p className="slider-text">{slide.subtext}</p>
+    <>
+      <Sslider
+        className="slide-container"
+        id="slider"
+        background={colors.slider_background_color}
+        text={colors.slider_text_color}
+      >
+        <Slide {...properties}>
+          {sliders.map((slide) => {
+            return (
+              <div key={slide.id} className="each-slide">
+                <div
+                  className="each-img"
+                  style={{ backgroundImage: `url(${slide.imgSrc})` }}
+                />
+                <div className="each-text">
+                  <div>
+                    <h2 className="each-title">{slide.title}</h2>
+                    <p className="slider-text">{slide.subtext}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </Slide>
-    </Sslider>
+            );
+          })}
+        </Slide>
+      </Sslider>
+      <SAccord id="accordion">
+        <Accordion allowZeroExpanded>
+          {sliders.map((slide) => {
+            return (
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    <h2>{slide.title}</h2>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p className="subtext">{slide.subtext}</p>
+                </AccordionItemPanel>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+      </SAccord>
+    </>
   );
 }
 

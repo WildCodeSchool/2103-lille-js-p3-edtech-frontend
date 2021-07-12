@@ -13,6 +13,7 @@ import Actus from './components/Actus/Actus';
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
 import Newsletter from './components/Newsletter/Newsletter';
+import SButton from './Style';
 
 dotenv.config();
 
@@ -43,16 +44,18 @@ export default function App() {
       <TwitterTweetEmbed />
       <TwitterTimelineEmbed />
       {sections}
-      <ScrollToTop
-        smooth
-        color="white"
-        style={{
-          backgroundColor: 'red',
-          borderRadius: '100%',
-          height: '30px',
-          width: '30px',
-        }}
-      />
+      <SButton>
+        <ScrollToTop
+          smooth
+          color="white"
+          style={{
+            backgroundColor: 'red',
+            borderRadius: '100%',
+            height: '30px',
+            width: '30px',
+          }}
+        />
+      </SButton>
     </div>
   );
 }

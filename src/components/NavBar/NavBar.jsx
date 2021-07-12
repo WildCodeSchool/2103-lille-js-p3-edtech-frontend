@@ -51,8 +51,9 @@ export default function NavBar() {
             <a href="#Contact">
               <li className="contact">{translations.third_btn || null}</li>
             </a>
-            <a href="#Slider">
-              <li className="presentation">Présentation</li>
+
+            <a href="#accordion">
+              <li className="accordion">{translations.fourth_btn}</li>
             </a>
           </div>
         </ul>
