@@ -67,16 +67,11 @@ const SContact = styled.div`
       cursor: pointer;
       background-color: ${(props) => props.background_button};
       color: ${(props) => props.text_button};
-      height: 45px;
-      width: 15%;
       border-radius: 17px;
+      padding: 10px 50px;
       margin: 10px;
       font-size: 1.2em;
       font-weight: bold;
-
-      @media (max-width: 600px) {
-        font-size: 0.5em;
-      }
     }
 
     .active:hover {
@@ -86,16 +81,11 @@ const SContact = styled.div`
     .inactive {
       border: 2px transparent solid;
       background-color: ${(props) => props.background_button_inactive};
-      height: 45px;
-      width: 15%;
       border-radius: 17px;
       margin: 10px;
       font-size: 1.2em;
       font-weight: bold;
       color: ${(props) => props.text_button_inactive};
-      @media (max-width: 600px) {
-        font-size: 0.5em;
-      }
     }
   }
 
@@ -107,6 +97,31 @@ const SContact = styled.div`
     input {
       width: 15px;
       height: 30px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .container {
+      width: inherit;
+      margin-top: 15px;
+      padding: 0;
+    }
+
+    .firstBloc,
+    .secondBloc {
+      width: inherit;
+    }
+
+    input,
+    textarea {
+      padding: 5px;
+      border-radius: 20px;
+    }
+
+    .button .active,
+    .button .inactive {
+      font-size: 1.2em;
+      padding: 10px 70px;
     }
   }
 `;
