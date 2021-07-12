@@ -27,9 +27,11 @@ const SFooter = styled.footer`
   }
 
   .links {
+    @media (max-width: 600px) {
+      display: none;
+    }
     font-size: 0.9em;
     line-height: 1.5em;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
