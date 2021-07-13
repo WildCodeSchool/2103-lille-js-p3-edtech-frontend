@@ -86,10 +86,6 @@ const SFooter = styled.footer`
     color: white;
     font-size: 0.9em;
   }
-
-  .inputAdress {
-    display: none;
-  }
 `;
 
 export default SFooter;
