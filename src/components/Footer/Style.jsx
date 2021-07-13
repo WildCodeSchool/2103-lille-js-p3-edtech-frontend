@@ -7,12 +7,15 @@ const SFooter = styled.footer`
   left: 0;
   right: 0;
   height: 17vh;
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 20px;
   display: flex;
   justify-content: space-between;
 
   .logo {
+    @media (max-width: 600px) {
+      width: 40%;
+    }
     width: 17%;
   }
 
@@ -22,8 +25,13 @@ const SFooter = styled.footer`
   }
 
   .infos {
+    @media (max-width: 600px) {
+      font-size: 0.8em;
+      padding-top: 12px;
+    }
+
+    font-size: 1.1em;
     color: ${(props) => props.text};
-    font-size: 0.9em;
     line-height: 1.5em;
   }
 
@@ -31,7 +39,7 @@ const SFooter = styled.footer`
     @media (max-width: 600px) {
       display: none;
     }
-    font-size: 0.9em;
+    font-size: 1.1em;
     line-height: 1.5em;
     display: flex;
     flex-direction: column;
@@ -60,6 +68,18 @@ const SFooter = styled.footer`
   }
 
   .date {
+    color: white;
+    font-size: 0.8em;
+  }
+
+  .date_responsive {
+    @media (max-width: 600px) {
+      margin: auto;
+      padding-top: 90px;
+    }
+    @media (min-width: 600px) {
+      display: none;
+    }
     color: white;
     font-size: 0.9em;
   }

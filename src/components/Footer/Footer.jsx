@@ -46,6 +46,7 @@ export default function Footer() {
         </ul>
         <div className="date">{translations.date || null}</div>
       </div>
+      <div className="date_responsive">{translations.date || null}</div>
 
       <div className="infos">
         <div>
