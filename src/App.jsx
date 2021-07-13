@@ -1,29 +1,61 @@
+import { TwitterTweetEmbed, TwitterTimelineEmbed } from 'react-twitter-embed';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import dotenv from 'dotenv';
+import ScrollToTop from 'react-scroll-to-top';
 import Header from './components/Header/Header';
-import NavBar from './components/NavBar/NavBar';
 import Slider from './components/Slider/Slider';
+import NavBar from './components/NavBar/NavBar';
 import HdfMap from './components/HdfMap/HdfMap';
 import Members from './components/Members/Members';
 import Partners from './components/Partners/Partners';
-import Events from './components/Events/Events';
-import HdfTwitter from './components/HdfTwitter/HdfTwitter';
+import Actus from './components/Actus/Actus';
 import ContactForm from './components/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
+import Newsletter from './components/Newsletter/Newsletter';
+import SButton from './Style';
 
-function App() {
+dotenv.config();
+
+export default function App() {
+  const [sections, setSections] = useState([]);
+  let nameSection = null;
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_API_URL}/sections`).then(({ data }) => {
+      const tmpSections = data.map((section) => {
+        if (section.name === 'Header') nameSection = <Header />;
+        if (section.name === 'NavBar') nameSection = <NavBar />;
+        if (section.name === 'Slider') nameSection = <Slider />;
+        if (section.name === 'HdfMap') nameSection = <HdfMap />;
+        if (section.name === 'Members') nameSection = <Members />;
+        if (section.name === 'Partners') nameSection = <Partners />;
+        if (section.name === 'HdfTwitter') nameSection = <Actus />;
+        if (section.name === 'ContactForm') nameSection = <ContactForm />;
+        if (section.name === 'Newsletter') nameSection = <Newsletter />;
+        if (section.name === 'Footer') nameSection = <Footer />;
+        return nameSection;
+      });
+      setSections(tmpSections);
+    });
+  }, []);
   return (
     <div className="App">
-      <Header />
-      <NavBar />
-      <Slider />
-      <HdfMap />
-      <Members />
-      <Partners />
-      <Events />
-      <HdfTwitter />
-      <ContactForm />
-      <Footer />
+      <TwitterTweetEmbed />
+      <TwitterTimelineEmbed />
+      {sections}
+      <SButton>
+        <ScrollToTop
+          smooth
+          color="white"
+          style={{
+            backgroundColor: 'red',
+            borderRadius: '100%',
+            height: '30px',
+            width: '30px',
+          }}
+        />
+      </SButton>
     </div>
   );
 }
-
-export default App;

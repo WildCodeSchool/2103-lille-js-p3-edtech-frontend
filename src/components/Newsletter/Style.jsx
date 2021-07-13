@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 
-const SMap = styled.div`
+const SNewsletter = styled.div`
   background-color: ${(props) => props.background};
-  margin-top: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
   color: ${(props) => props.text};
-  height: 40vh;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 600px) {
-    margin-top: 0;
-  }
-
-  .title-map {
+  .title-newsletter {
     font-size: 2.8rem;
     font-weight: bold;
     text-align: center;
@@ -24,22 +19,14 @@ const SMap = styled.div`
     }
   }
 
-  .description {
+  .description-newsletter {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-
-    .description-map {
-      font-size: 1.1em;
-      margin: auto;
-      text-align: center;
-      padding: 10px;
-    }
-    img {
-      max-width: 25%;
-      padding: 10px;
-    }
+    font-size: 1.3em;
+    text-align: center;
+    padding: 10px;
   }
 
   a {
@@ -64,4 +51,4 @@ const SMap = styled.div`
   }
 `;
 
-export default SMap;
+export default SNewsletter;

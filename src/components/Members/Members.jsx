@@ -11,6 +11,7 @@ export default function Members() {
   const [members, setMembers] = useState([]);
   const [translations, setTranslations] = useState({});
   const [settings, setSettings] = useState({});
+  const [colors, setColors] = useState({});
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/members`).then(({ data }) => {
@@ -24,9 +25,16 @@ export default function Members() {
       .then(({ data }) => {
         setSettings(data);
       });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
   return (
-    <SMembers>
+    <SMembers
+      id="members"
+      background={colors.members_background_color}
+      text={colors.members_text_color}
+    >
       <h1>{translations.second_section}</h1>
       {settings.carousel_duration && (
         <Carousel
@@ -46,6 +54,7 @@ export default function Members() {
           minimumTouchDrag={80}
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
+          removeArrowOnDeviceType={['tablet', 'mobile']}
           responsive={{
             desktop: {
               breakpoint: {
@@ -60,7 +69,7 @@ export default function Members() {
                 max: 464,
                 min: 0,
               },
-              items: 1,
+              items: 2,
               partialVisibilityGutter: 30,
             },
             tablet: {
@@ -68,7 +77,7 @@ export default function Members() {
                 max: 1024,
                 min: 464,
               },
-              items: 2,
+              items: 3,
               partialVisibilityGutter: 30,
             },
           }}
@@ -79,9 +88,9 @@ export default function Members() {
         >
           {members.map((member) => {
             return (
-              <div className="slide">
+              <div key={member.id} className="slide">
                 <a href={member.link} target="_blank" rel="noreferrer">
-                  <img src={member.logo_src} alt={member.logo_alt} />
+                  <img src={member.logoSrc} alt={member.logoAlt} />
                 </a>
               </div>
             );

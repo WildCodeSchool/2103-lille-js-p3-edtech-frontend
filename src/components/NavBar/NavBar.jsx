@@ -9,6 +9,7 @@ export default function NavBar() {
   const [translations, setTranslations] = useState({});
   const [images, setImages] = useState({});
   const [externeLinks, SetExterneLinks] = useState({});
+  const [colors, setColors] = useState({});
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
@@ -22,24 +23,39 @@ export default function NavBar() {
       .then(({ data }) => {
         SetExterneLinks(data);
       });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
   return (
-    <SNavBar>
+    <SNavBar
+      id="navBar"
+      background={colors.navbar_background_color}
+      text={colors.navbar_text_color}
+    >
       <nav>
         <ul>
-          <a href="#Actualités">
-            <li className="actu">{translations.first_btn || null}</li>
-          </a>
-          <a
-            href={externeLinks?.link_helloasso}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <li className="join">{translations.second_btn || null}</li>
-          </a>
-          <a href="#Contact">
-            <li className="contact">{translations.third_btn || null}</li>
-          </a>
+          <div className="actu-join">
+            <a href="#Actualités">
+              <li className="actu">{translations.first_btn || null}</li>
+            </a>
+            <a
+              href={externeLinks?.link_helloasso}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li className="join">{translations.second_btn || null}</li>
+            </a>
+          </div>
+          <div className="contact-slid">
+            <a href="#Contact">
+              <li className="contact">{translations.third_btn || null}</li>
+            </a>
+
+            <a href="#accordion">
+              <li className="accordion">{translations.fourth_btn}</li>
+            </a>
+          </div>
         </ul>
 
         <div className="pictos">
@@ -63,6 +79,7 @@ export default function NavBar() {
               alt={images?.picto_facebook?.alt}
             />
           </a>
+
           <a
             href={externeLinks?.link_linkedIn}
             target="_blank"

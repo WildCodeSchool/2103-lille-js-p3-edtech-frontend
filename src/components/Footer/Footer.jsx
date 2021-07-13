@@ -4,6 +4,7 @@ import SFooter from './Style';
 
 export default function Footer() {
   const [translations, setTranslations] = useState({});
+  const [colors, setColors] = useState({});
   const [images, setImages] = useState({});
 
   useEffect(() => {
@@ -13,13 +14,21 @@ export default function Footer() {
     axios.get(`${process.env.REACT_APP_API_URL}/images`).then(({ data }) => {
       setImages(data);
     });
+    axios.get(`${process.env.REACT_APP_API_URL}/colors`).then(({ data }) => {
+      setColors(data);
+    });
   }, []);
 
   return (
-    <SFooter className="background">
+    <SFooter
+      className="background"
+      background={colors.footer_background_color}
+      text={colors.footer_text_color}
+    >
       <div className="logo">
         <img src={images?.logo_footer?.src} alt={images?.picto_footer?.alt} />
       </div>
+
       <div className="links">
         <ul>
           <a href="#map">
