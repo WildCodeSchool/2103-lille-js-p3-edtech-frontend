@@ -49,7 +49,7 @@ export default function Footer() {
       <div className="date_responsive">{translations.date || null}</div>
 
       <div className="infos">
-        <div>
+        <div className="adress">
           <h3>{translations.edtechhdf_title || null}</h3>
 
           <p>

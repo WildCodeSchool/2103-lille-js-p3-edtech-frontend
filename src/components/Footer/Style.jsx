@@ -6,9 +6,10 @@ const SFooter = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 17vh;
+  height: 17%;
   font-size: 0.9em;
   padding: 20px;
+  padding-left: 0px;
   display: flex;
   justify-content: space-between;
 
@@ -29,7 +30,7 @@ const SFooter = styled.footer`
       font-size: 0.8em;
       padding-top: 12px;
     }
-
+    height: inherit;
     font-size: 1.1em;
     color: ${(props) => props.text};
     line-height: 1.5em;
@@ -66,7 +67,9 @@ const SFooter = styled.footer`
     text-decoration: none;
     font-size: 0.9em;
   }
-
+  .adress {
+    height: auto;
+  }
   .date {
     color: white;
     font-size: 0.8em;
