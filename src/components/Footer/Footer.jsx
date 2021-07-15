@@ -56,10 +56,10 @@ export default function Footer() {
             {translations.edtech_adress || null} <br />
             {translations.edtech_city || null}
           </p>
-          <p className="inputAdress">{translations.edtech_input1 || null} </p>
-          <p className="inputAdress"> {translations.edtech_input2 || null}</p>
-          <p className="inputAdress">{translations.edtech_input3 || null} </p>
-          <p className="inputAdress">{translations.edtech_input4 || null} </p>
+          <p className="inputAdress">{translations.adress_field1 || null} </p>
+          <p className="inputAdress"> {translations.adress_field2 || null}</p>
+          <p className="inputAdress">{translations.adress_field3 || null} </p>
+          <p className="inputAdress">{translations.adress_field4 || null} </p>
         </div>
       </div>
     </SFooter>
