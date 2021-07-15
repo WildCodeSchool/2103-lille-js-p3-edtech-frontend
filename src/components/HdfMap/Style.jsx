@@ -6,7 +6,7 @@ const SMap = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
   color: ${(props) => props.text};
-  height: 350px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +37,7 @@ const SMap = styled.div`
       padding: 10px;
     }
     img {
-      max-width: 25%;
+      max-width: 40%;
       padding: 10px;
     }
   }
