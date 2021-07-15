@@ -6,13 +6,17 @@ const SFooter = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 17vh;
-  font-size: 0.8em;
+  height: 17%;
+  font-size: 0.9em;
   padding: 20px;
+  padding-left: 0px;
   display: flex;
   justify-content: space-between;
 
   .logo {
+    @media (max-width: 600px) {
+      width: 40%;
+    }
     width: 17%;
   }
 
@@ -22,15 +26,22 @@ const SFooter = styled.footer`
   }
 
   .infos {
+    @media (max-width: 600px) {
+      font-size: 0.8em;
+      padding-top: 12px;
+    }
+    height: inherit;
+    font-size: 1.1em;
     color: ${(props) => props.text};
-    font-size: 0.9em;
     line-height: 1.5em;
   }
 
   .links {
-    font-size: 0.9em;
+    @media (max-width: 600px) {
+      display: none;
+    }
+    font-size: 1.1em;
     line-height: 1.5em;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -56,14 +67,24 @@ const SFooter = styled.footer`
     text-decoration: none;
     font-size: 0.9em;
   }
-
+  .adress {
+    height: auto;
+  }
   .date {
     color: white;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
-  .inputAdress {
-    display: none;
+  .date_responsive {
+    @media (max-width: 600px) {
+      margin: auto;
+      padding-top: 90px;
+    }
+    @media (min-width: 600px) {
+      display: none;
+    }
+    color: white;
+    font-size: 0.9em;
   }
 `;
 
