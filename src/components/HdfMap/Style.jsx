@@ -6,13 +6,13 @@ const SMap = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
   color: ${(props) => props.text};
-  height: 40vh;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (max-width: 600px) {
-    margin-top: 0;
+    margin-top: 5px;
   }
 
   .title-map {

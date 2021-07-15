@@ -63,7 +63,7 @@ const SAccord = styled.div`
   @media (min-width: 450px) {
     display: none;
   }
-  margin-top: 10px;
+  padding-top: 10px;
 
   .accordion {
     border-radius: 2px;

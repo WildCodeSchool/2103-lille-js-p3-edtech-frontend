@@ -5,7 +5,7 @@ const SNewsletter = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
   color: ${(props) => props.text};
-  height: 20vh;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
