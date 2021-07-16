@@ -14,9 +14,23 @@ export default function ContactForm() {
     lastname: '',
     society: '',
     phoneNumber: '',
-    email: '',
     message: '',
   });
+  const [isValid, setIsValid] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const emailRegex = /\S+@\S+\.\S+/;
+
+  const validateEmail = (e) => {
+    const email = e.target.value;
+    if (emailRegex.test(email)) {
+      setIsValid(true);
+      setMessage('');
+    } else {
+      setIsValid(false);
+      setMessage('Adresse email incorrecte !');
+    }
+  };
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/texts`).then(({ data }) => {
@@ -35,15 +49,9 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.REACT_APP_API_URL}/contact`, details).then(
-      (response) => {
-        console.log(response);
-        setIsSent(true);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    axios.post(`${process.env.REACT_APP_API_URL}/contact`, details).then(() => {
+      setIsSent(true);
+    });
   };
 
   return (
@@ -144,11 +152,14 @@ export default function ContactForm() {
                     id="email"
                     name="email"
                     value={details.email}
-                    onChange={handleChange}
+                    onChange={validateEmail}
                     required={
                       translations?.requirable_fifth_input === 'obligatoire'
                     }
                   />
+                  <span className={`message ${isValid ? 'success' : 'error'}`}>
+                    {message}
+                  </span>
                 </label>
               </div>
               <p>{translations.sixth_input || null}</p>
