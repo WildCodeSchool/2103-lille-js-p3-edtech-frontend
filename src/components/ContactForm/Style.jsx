@@ -14,6 +14,9 @@ const SContact = styled.div`
     @media (max-width: 600px) {
       flex-direction: column;
       align-content: center;
+      width: inherit;
+      margin-top: 15px;
+      padding: 0;
     }
   }
 
@@ -97,6 +100,13 @@ const SContact = styled.div`
     input {
       width: 15px;
       height: 30px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .firstBloc,
+    .secondBloc {
+      width: inherit;
     }
   }
 

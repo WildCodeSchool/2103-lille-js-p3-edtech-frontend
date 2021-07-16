@@ -71,10 +71,36 @@ const SNavBar = styled.div`
     .join:hover {
       border: 2px ${(props) => props.text} solid;
     }
-    @media (max-width: 950px) and (min-width: 780px) {
+
+    @media (max-width: 1240px) and (min-width: 950px) {
+      li {
+        font-size: 1.35em;
+      }
       .actu-join {
         li {
-          margin-left: 5px;
+          margin-left: 0px;
+        }
+
+        .actu {
+          margin-right: 50px;
+        }
+      }
+
+      .contact-slid {
+        margin-left: 40px;
+      }
+      .pictos {
+        width: 35%;
+      }
+    }
+
+    @media (max-width: 950px) and (min-width: 835px) {
+      li {
+        font-size: 1.35em;
+      }
+      .actu-join {
+        li {
+          margin-left: -5px;
         }
 
         .actu {
@@ -90,14 +116,39 @@ const SNavBar = styled.div`
       }
     }
 
-    @media (max-width: 770px) and (min-width: 400px) {
+    @media (max-width: 835px) and (min-width: 770px) {
       li {
-        margin-left: 0px;
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
       .actu-join {
         li {
-          margin-left: 0;
+          margin-left: -25px;
+        }
+
+        .actu {
+          margin-right: 0;
+        }
+      }
+
+      .contact-slid {
+        margin-left: 0;
+      }
+      .pictos {
+        width: 40%;
+      }
+    }
+    @media (max-width: 770px) and (min-width: 670px) {
+      ul {
+        margin-left: -25px;
+        margin-right: -20px;
+      }
+      li {
+        margin-left: 0px;
+        font-size: 0.9em;
+      }
+      .actu-join {
+        li {
+          margin-left: -10px;
         }
 
         .actu {
@@ -120,7 +171,42 @@ const SNavBar = styled.div`
       }
     }
 
-    @media (max-width: 440px) {
+    @media (max-width: 670px) and (min-width: 470px) {
+      ul {
+        margin-left: 8%;
+        margin-right: -20px;
+      }
+      li {
+        margin-left: 0px;
+        font-size: 0.7em;
+      }
+      .actu-join {
+        li {
+          margin-left: -90px;
+        }
+
+        .actu {
+          margin-right: 0;
+        }
+      }
+
+      .contact-slid {
+        margin-left: -90px;
+      }
+
+      .pictos {
+        width: 50%;
+        margin-right: 20px;
+        margin-left: -8%;
+
+        img {
+          border-radius: 35px;
+          width: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 470px) {
       flex-direction: column;
 
       ul {
