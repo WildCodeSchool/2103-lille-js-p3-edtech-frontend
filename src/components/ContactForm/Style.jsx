@@ -85,6 +85,7 @@ const SContact = styled.div`
       border: 2px transparent solid;
       background-color: ${(props) => props.background_button_inactive};
       border-radius: 17px;
+      padding: 10px 50px;
       margin: 10px;
       font-size: 1.2em;
       font-weight: bold;
