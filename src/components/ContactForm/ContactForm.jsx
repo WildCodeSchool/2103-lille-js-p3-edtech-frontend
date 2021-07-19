@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import SContact from './Style';
 
 dotenv.config();
@@ -35,9 +37,14 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${process.env.REACT_APP_API_URL}/contact`, details).then(() => {
-      setIsSent(true);
-    });
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/contact`, details)
+      .then(() => {
+        setIsSent(true);
+      })
+      .catch(() => {
+        toast('Adresse email incorrecte !');
+      });
   };
 
   return (
@@ -170,6 +177,7 @@ export default function ContactForm() {
             <button type="submit" className="active" disabled={handleSubmit}>
               {translations.contact_sendMessage || null}
             </button>
+            <ToastContainer />
           </div>
         </form>
       )}
