@@ -41,7 +41,7 @@ const SMap = styled.div`
       padding: 10px;
 
       @media (max-width: 500px) {
-        max-width: 80%;
+        max-width: 70%;
         height: 10rem;
         border-radius: 15px;
       }
