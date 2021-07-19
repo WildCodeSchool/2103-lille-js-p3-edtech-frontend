@@ -55,7 +55,7 @@ const SContact = styled.div`
   }
 
   textarea {
-    font-size: 0.9em;
+    font-size: 1.1em;
     padding: 5px;
     width: 100%;
     height: 210px;
@@ -133,6 +133,11 @@ const SContact = styled.div`
     .button .inactive {
       font-size: 1.2em;
       padding: 10px 70px;
+    }
+
+    .RGPD input {
+      width: 40px;
+      height: 50px;
     }
   }
 `;
