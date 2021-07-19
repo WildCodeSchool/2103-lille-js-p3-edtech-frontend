@@ -39,6 +39,12 @@ const SMap = styled.div`
     img {
       max-width: 40%;
       padding: 10px;
+
+      @media (max-width: 500px) {
+        max-width: 80%;
+        height: 10rem;
+        border-radius: 15px;
+      }
     }
   }
 
