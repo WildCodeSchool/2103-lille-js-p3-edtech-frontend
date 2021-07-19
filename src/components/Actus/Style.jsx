@@ -103,6 +103,10 @@ const SActuTwit = styled.div`
       img {
         margin: 15px;
       }
+
+      p {
+        font-size: 1.5em;
+      }
     }
 
     .twit-content {
