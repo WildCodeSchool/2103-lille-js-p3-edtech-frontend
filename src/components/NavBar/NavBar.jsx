@@ -52,7 +52,7 @@ export default function NavBar() {
               <li className="contact">{translations.third_btn || null}</li>
             </a>
 
-            <a href="#accordion">
+            <a href="#presentation">
               <li className="accordion">{translations.fourth_btn}</li>
             </a>
           </div>

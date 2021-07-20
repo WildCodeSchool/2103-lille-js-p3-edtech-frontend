@@ -55,7 +55,7 @@ const SContact = styled.div`
   }
 
   textarea {
-    font-size: 0.9em;
+    font-size: 1.1em;
     padding: 5px;
     width: 100%;
     height: 210px;
@@ -85,11 +85,23 @@ const SContact = styled.div`
       border: 2px transparent solid;
       background-color: ${(props) => props.background_button_inactive};
       border-radius: 17px;
+      padding: 10px 50px;
       margin: 10px;
       font-size: 1.2em;
       font-weight: bold;
       color: ${(props) => props.text_button_inactive};
     }
+  }
+
+  .Toastify__progress-bar {
+    background: ${(props) => props.background_alert_bar};
+  }
+  .Toastify__toast {
+    background-color: ${(props) => props.background_alert};
+    color: ${(props) => props.text_alert};
+  }
+  .Toastify__close-button {
+    color: ${(props) => props.text_alert};
   }
 
   .RGPD {
@@ -132,6 +144,11 @@ const SContact = styled.div`
     .button .inactive {
       font-size: 1.2em;
       padding: 10px 70px;
+    }
+
+    .RGPD input {
+      width: 40px;
+      height: 50px;
     }
   }
 `;

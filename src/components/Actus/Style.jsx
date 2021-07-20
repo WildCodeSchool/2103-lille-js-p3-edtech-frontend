@@ -93,7 +93,7 @@ const SActuTwit = styled.div`
     .actus {
       padding: 10px;
       width: inherit;
-      font-size: 0.7rem;
+      font-size: 0.6rem;
     }
 
     .imgAndp {
@@ -102,6 +102,10 @@ const SActuTwit = styled.div`
 
       img {
         margin: 15px;
+      }
+
+      p {
+        font-size: 1.5em;
       }
     }
 
