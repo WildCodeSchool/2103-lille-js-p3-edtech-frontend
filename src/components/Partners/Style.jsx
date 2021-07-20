@@ -16,7 +16,7 @@ const SPartners = styled.div`
   }
 
   .partner-logo {
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
       display: none;
     }
     display: flex;
@@ -39,7 +39,7 @@ const SPartners = styled.div`
     }
   }
   .Carousel {
-    @media (min-width: 400px) {
+    @media (min-width: 500px) {
       display: none;
     }
     margin: auto;

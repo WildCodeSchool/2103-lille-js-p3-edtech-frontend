@@ -42,7 +42,7 @@ export default function HdfTwitter() {
           {actus.map((actu) => {
             return (
               actu.isActive === 'true' && (
-                <div className="actu" id="actu1">
+                <div key={actu.id} className="actu" id="actu1">
                   <div className="title-actu">
                     <h2>{actu.title || null}</h2>
                   </div>

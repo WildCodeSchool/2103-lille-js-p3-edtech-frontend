@@ -74,7 +74,7 @@ function Slider() {
         <Accordion allowZeroExpanded>
           {sliders.map((slide) => {
             return (
-              <AccordionItem>
+              <AccordionItem key={slide.id}>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     <h2>{slide.title}</h2>
