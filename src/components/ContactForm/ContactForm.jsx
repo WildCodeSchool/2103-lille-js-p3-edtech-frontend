@@ -59,6 +59,9 @@ export default function ContactForm() {
         colors.contact_button_background_color_inactive
       }
       text_button_inactive={colors.contact_button_text_color_inactive}
+      background_alert={colors.contact_background_alert}
+      background_alert_bar={colors.contact_background_alert_bar}
+      text_alert={colors.contact_text_alert}
     >
       <h1>{translations.fifth_section || null}</h1>
       <div className="catchPhrase">

@@ -93,6 +93,17 @@ const SContact = styled.div`
     }
   }
 
+  .Toastify__progress-bar {
+    background: ${(props) => props.background_alert_bar};
+  }
+  .Toastify__toast {
+    background-color: ${(props) => props.background_alert};
+    color: ${(props) => props.text_alert};
+  }
+  .Toastify__close-button {
+    color: ${(props) => props.text_alert};
+  }
+
   .RGPD {
     display: flex;
     justify-content: center;
