@@ -22,6 +22,7 @@ export default function Header() {
     <SHeader
       background={colors.header_background_color}
       text={colors.header_text_color}
+      background_img={images?.header_background_img?.src}
     >
       <div className="logo" id="/">
         <img
