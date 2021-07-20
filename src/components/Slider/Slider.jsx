@@ -70,7 +70,7 @@ function Slider() {
           })}
         </Slide>
       </Sslider>
-      <SAccord id="accordion">
+      <SAccord id="presentation">
         <Accordion allowZeroExpanded>
           {sliders.map((slide) => {
             return (
