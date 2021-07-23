@@ -52,6 +52,7 @@ const Sslider = styled.div`
     font-weight: bold;
     padding-bottom: 20px;
     margin-left: 200px;
+    margin-right: 30px;
     @media (max-width: 800px) {
       font-size: 0.9em;
       margin-left: 0px;

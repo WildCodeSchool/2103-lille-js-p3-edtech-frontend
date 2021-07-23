@@ -55,7 +55,7 @@ export default function App() {
   }, []);
   return (
     <div className="App">
-      <TwitterTimelineEmbed sourceType="profile" screenName="edtech_hdf" />
+      <TwitterTimelineEmbed />
       {sections}
       <SButton>
         <ScrollToTop
