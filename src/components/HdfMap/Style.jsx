@@ -37,7 +37,7 @@ const SMap = styled.div`
       padding: 10px;
     }
     img {
-      max-width: 40%;
+      max-width: 35%;
       padding: 10px;
 
       @media (max-width: 500px) {
